@@ -1,4 +1,4 @@
-# 🏦 Advanced Banking Management System
+# Advanced Banking Management System
 
 <p align="center">
   <img src="images/01-main-menu.png" alt="Advanced Banking System Main Menu" width="850">
