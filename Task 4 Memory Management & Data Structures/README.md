@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# 🚀 Data Structures Management System
+# Data Structures Management System
 
 ### Dynamic Memory Allocation & Core Data Structures in C
 
