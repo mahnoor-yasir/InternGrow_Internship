@@ -1,4 +1,4 @@
-# 📇 Contact Management System — Advanced C Project
+# 📇 Contact Management System Advanced C Project
 
 <p align="center">
   <img src="images/01_Main_Menu.png" alt="Contact Management System Main Menu" width="850">
