@@ -1,30 +1,29 @@
-# Advanced Banking Management System
+# 🏦 Advanced Banking Management System
 
 <p align="center">
-  <img src="images/01-main-menu.png" alt="Advanced Banking System Main Menu" width="850">
+  <img src="images/01-main-menu.png" alt="Advanced Banking Management System" width="850">
 </p>
 
-<h3 align="center">A Feature-Rich Console-Based Banking Management System in C</h3>
+<h1 align="center">Advanced Banking Management System</h1>
 
 <p align="center">
-  <b>InternGrow Internship — Task 2</b><br>
-  Banking Management System | Week 2 | C Programming
+  A feature-rich, menu-driven banking application developed in C
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Language-C-blue?style=for-the-badge&logo=c">
-  <img src="https://img.shields.io/badge/Platform-Windows-lightgrey?style=for-the-badge&logo=windows">
-  <img src="https://img.shields.io/badge/File%20Handling-Binary%20Files-success?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Internship-InternGrow-purple?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white">
+  <img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white">
+  <img src="https://img.shields.io/badge/File%20Storage-Binary%20File-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Programming-Structured%20C-orange?style=for-the-badge">
 </p>
 
 ---
 
 ## 📌 Project Overview
 
-The **Advanced Banking Management System** is a menu-driven console application developed in the C programming language.
+The **Advanced Banking Management System** is a console-based banking application developed in the **C programming language**.
 
-The project demonstrates practical use of:
+The project demonstrates the practical implementation of core C programming concepts including:
 
 - Structures
 - Nested structures
@@ -34,171 +33,229 @@ The project demonstrates practical use of:
 - Binary file storage
 - Conditional logic
 - Loops
-- String handling
-- Password protection
+- String manipulation
 - Input validation
+- Password protection
 - Transaction management
 - Date and time handling
-- Windows console customization
 - Error handling
+- Windows console formatting
 
-The system allows users to create and manage bank accounts, deposit and withdraw money, transfer funds between accounts, view balances, inspect transaction history, search accounts, freeze or unfreeze accounts, change passwords, and generate monthly statements.
+The system provides a complete set of banking operations through a structured command-line interface.
 
-Account information is persisted using the binary file `accounts.dat`, allowing data to remain available after the program is closed and started again.
+Users can create accounts, deposit money, withdraw money, check balances, view transaction history, search accounts, transfer funds, change passwords, generate monthly statements, and manage account status.
 
----
-
-# 🎯 Task Objective
-
-### Task 2 — Banking Management System
-
-**Scenario:**  
-Create a banking application using structures and file handling.
-
-### Required Features
-
-| Requirement | Implementation |
-|---|---|
-| Create Account | ✅ |
-| Deposit Money | ✅ |
-| Withdraw Money | ✅ |
-| Balance Inquiry | ✅ |
-| Transaction History | ✅ |
-| Account Search | ✅ |
-| File Storage | ✅ |
-| Password Protection | ✅ |
-| Error Handling | ✅ |
-
-### Additional Features Implemented
-
-| Advanced Feature | Status |
-|---|---|
-| Money Transfer | ✅ |
-| View All Accounts | ✅ |
-| Freeze / Unfreeze Account | ✅ |
-| Change Password | ✅ |
-| Monthly Statement | ✅ |
-| Daily Withdrawal Limit | ✅ |
-| Transaction Limits | ✅ |
-| Transaction Descriptions | ✅ |
-| Date & Time Tracking | ✅ |
-| Colored Console Interface | ✅ |
-| Input Validation | ✅ |
-| Account Status Management | ✅ |
-
----
-
-# ✨ Key Highlights
-
-### 🔐 Password-Protected Operations
-
-Sensitive account operations require the account password.
-
-Passwords are entered through a custom console function that displays `*` characters instead of showing the actual password.
-
-```text
-Enter Account Number: 20523
-Enter Password: ******
-````
-
-Password validation is performed before operations such as:
-
-* Deposits
-* Withdrawals
-* Balance inquiries
-* Transaction history
-* Account deletion
-* Money transfers
-* Password changes
-* Monthly statements
-
----
-
-### 💾 Persistent File Storage
-
-The system stores account information in:
+Account data is persistently stored in a binary file named:
 
 ```text
 accounts.dat
-```
+````
 
-The program loads existing account records when it starts and saves updated records after changes.
-
-Binary file operations are performed using:
-
-```c
-fopen()
-fread()
-fwrite()
-fclose()
-```
-
-This means account data does not disappear when the application closes.
+This allows account information and transaction records to remain available even after the program is closed.
 
 ---
 
-### 💰 Complete Banking Operations
+# ✨ Project Highlights
 
-The application supports:
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 👤 Account Management
+
+* Create new account
+* Search account
+* View all accounts
+* Delete account
+* Change password
+* Freeze / unfreeze account
+
+</td>
+
+<td width="50%" valign="top">
+
+### 💰 Banking Operations
+
+* Deposit money
+* Withdraw money
+* Transfer money
+* Balance inquiry
+* Transaction history
+* Monthly statements
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top">
+
+### 🔐 Security
+
+* Password-protected transactions
+* Masked password input
+* Admin authentication
+* Frozen-account protection
+* Password confirmation
+* Operation validation
+
+</td>
+
+<td width="50%" valign="top">
+
+### 💾 Data Management
+
+* Binary file storage
+* Automatic loading
+* Automatic saving
+* Persistent account records
+* Transaction records
+* Date and time tracking
+
+</td>
+</tr>
+</table>
+
+---
+
+# 🎯 Objectives
+
+The main objectives of this project are to demonstrate how C programming concepts can be combined to create a practical banking application.
+
+### Primary Objectives
+
+1. Implement banking operations using C structures.
+2. Store account information using structured data.
+3. Maintain transaction history for every account.
+4. Persist account data using binary file handling.
+5. Implement password-protected banking operations.
+6. Validate user input and prevent invalid transactions.
+7. Implement account status management.
+8. Provide a user-friendly console interface.
+9. Generate transaction and monthly account reports.
+10. Demonstrate modular programming through functions.
+
+---
+
+# 🧰 Technologies & Tools
+
+| Technology   | Purpose                                    |
+| ------------ | ------------------------------------------ |
+| C            | Core programming language                  |
+| `stdio.h`    | Input/output and file operations           |
+| `stdlib.h`   | Memory, random numbers and program control |
+| `string.h`   | String manipulation                        |
+| `time.h`     | Date and time handling                     |
+| `ctype.h`    | Character validation                       |
+| `conio.h`    | Password masking and keyboard input        |
+| `windows.h`  | Windows console colors                     |
+| Binary Files | Persistent account storage                 |
+
+---
+
+# 🏗️ System Architecture
 
 ```text
-Create Account
-Deposit Money
-Withdraw Money
-Balance Inquiry
-Transaction History
-Account Search
-Delete Account
-Transfer Money
-View All Accounts
-Freeze/Unfreeze Account
-Change Password
-Monthly Statement
-Exit
+                  ┌─────────────────────────────┐
+                  │     ADVANCED BANKING        │
+                  │          SYSTEM             │
+                  └──────────────┬──────────────┘
+                                 │
+                                 ▼
+                  ┌─────────────────────────────┐
+                  │         MAIN MENU           │
+                  └──────────────┬──────────────┘
+                                 │
+          ┌──────────────────────┼──────────────────────┐
+          │                      │                      │
+          ▼                      ▼                      ▼
+   ACCOUNT MANAGEMENT     BANKING OPERATIONS      REPORTING
+          │                      │                      │
+          ├─ Create              ├─ Deposit             ├─ History
+          ├─ Search              ├─ Withdraw            └─ Statement
+          ├─ Delete              ├─ Transfer
+          ├─ Password            └─ Balance
+          └─ Freeze
+                                 │
+                                 ▼
+                      ┌─────────────────────┐
+                      │   TRANSACTION DATA  │
+                      └──────────┬──────────┘
+                                 │
+                                 ▼
+                      ┌─────────────────────┐
+                      │    accounts.dat     │
+                      │   Binary Storage    │
+                      └─────────────────────┘
 ```
 
 ---
 
-# 🏗️ Project Architecture
+# 📊 Main Menu
 
-The application follows a function-based procedural design.
+The application provides the following main menu:
 
 ```text
-                    ┌───────────────────────────┐
-                    │   Advanced Banking System │
-                    └─────────────┬─────────────┘
-                                  │
-                    ┌─────────────▼─────────────┐
-                    │        Main Menu           │
-                    └─────────────┬─────────────┘
-                                  │
-          ┌───────────────────────┼────────────────────────┐
-          │                       │                        │
-          ▼                       ▼                        ▼
-   Account Management      Banking Operations       Administration
-          │                       │                        │
-          ├─ Create Account       ├─ Deposit               ├─ View All
-          ├─ Search Account       ├─ Withdraw              ├─ Freeze
-          ├─ Delete Account       ├─ Transfer              └─ Unfreeze
-          └─ Change Password      ├─ Balance
-                                  └─ Transactions
-                                           │
-                                           ▼
-                                  Monthly Statement
-                                           │
-                                           ▼
-                                   accounts.dat
++====================================================+
+|                  MAIN MENU                         |
++====================================================+
+|  1.  Create New Account                            |
+|  2.  Deposit Money                                 |
+|  3.  Withdraw Money                                |
+|  4.  Balance Inquiry                               |
+|  5.  Transaction History                           |
+|  6.  Account Search                                |
+|  7.  Delete Account                                |
+|  8.  Transfer Money                                |
+|  9.  View All Accounts                             |
+|  10. Freeze/Unfreeze Account                       |
+|  11. Change Password                               |
+|  12. Monthly Statement                             |
+|  0.  Exit                                          |
++====================================================+
 ```
+
+The main menu is implemented using a `while` loop and a `switch` statement.
+
+The program continues running until the user selects:
+
+```text
+0. Exit
+```
+
+---
+
+# 📸 Main Menu
+
+<table>
+<tr>
+<td align="center">
+
+### 01 — Main Menu
+
+<img src="images/01-main-menu.png" alt="Main Menu" width="850">
+
+<br>
+
+The main dashboard provides access to all account and banking operations.
+
+</td>
+</tr>
+</table>
 
 ---
 
 # 🧱 Data Structures
 
-The system uses two main structures.
+The application uses two main structures:
 
-## 1. Transaction Structure
+1. `Transaction`
+2. `Account`
 
-Each transaction stores information about a banking operation.
+These structures allow the system to represent real-world banking data in an organized way.
+
+---
+
+## 📜 Transaction Structure
 
 ```c
 typedef struct {
@@ -212,11 +269,11 @@ typedef struct {
 
 ### Transaction Fields
 
-| Field           | Purpose                            |
+| Field           | Description                        |
 | --------------- | ---------------------------------- |
-| `type`          | Transaction type                   |
+| `type`          | Type of transaction                |
 | `amount`        | Transaction amount                 |
-| `balance_after` | Balance after transaction          |
+| `balance_after` | Account balance after transaction  |
 | `date`          | Transaction date and time          |
 | `description`   | Additional transaction information |
 
@@ -232,9 +289,7 @@ Transfer Received
 
 ---
 
-## 2. Account Structure
-
-The main account structure stores complete customer information.
+## 👤 Account Structure
 
 ```c
 typedef struct {
@@ -255,80 +310,54 @@ typedef struct {
 
 ### Account Fields
 
-| Field                    | Purpose                                           |
-| ------------------------ | ------------------------------------------------- |
-| `account_no`             | Unique account identifier generated by the system |
-| `name`                   | Account holder name                               |
-| `password`               | Account password                                  |
-| `balance`                | Current account balance                           |
-| `transactions`           | Transaction history                               |
-| `transaction_count`      | Number of recorded transactions                   |
-| `creation_date`          | Account creation timestamp                        |
-| `account_type`           | Savings or Current                                |
-| `daily_withdrawal_limit` | Maximum daily withdrawal amount                   |
-| `daily_withdrawn`        | Amount withdrawn during current day               |
-| `last_withdrawal_date`   | Date of last withdrawal                           |
-| `is_active`              | Active/Frozen status                              |
+| Field                    | Description                             |
+| ------------------------ | --------------------------------------- |
+| `account_no`             | Unique account number                   |
+| `name`                   | Account holder name                     |
+| `password`               | Account password                        |
+| `balance`                | Current account balance                 |
+| `transactions`           | Array containing transaction records    |
+| `transaction_count`      | Number of transactions                  |
+| `creation_date`          | Date and time account was created       |
+| `account_type`           | Savings or Current                      |
+| `daily_withdrawal_limit` | Maximum daily withdrawal                |
+| `daily_withdrawn`        | Amount withdrawn during the current day |
+| `last_withdrawal_date`   | Date of the last withdrawal             |
+| `is_active`              | Account status: Active or Frozen        |
 
 ---
 
-# 📊 System Capacity
+# 📦 System Capacity
 
-The current implementation uses fixed-size arrays.
+The source code defines:
 
 ```c
 Account accounts[100];
 ```
 
-Therefore, the application can maintain up to:
+Therefore, the current implementation supports up to:
 
-**100 accounts**
+### 100 Accounts
 
-Each account can store:
+Each account contains:
 
 ```c
 Transaction transactions[200];
 ```
 
-Therefore, each account can maintain up to:
+Therefore, each account can store up to:
 
-**200 transaction records**
+### 200 Transactions
 
-The transaction-history display shows the most recent 20 transactions.
-
----
-
-# 🧭 Main Menu
-
-The application starts with an interactive main menu.
-
-```text
-+====================================================+
-|              ADVANCED BANKING SYSTEM               |
-+====================================================+
-
-1. Create New Account
-2. Deposit Money
-3. Withdraw Money
-4. Balance Inquiry
-5. Transaction History
-6. Account Search
-7. Delete Account
-8. Transfer Money
-9. View All Accounts
-10. Freeze/Unfreeze Account
-11. Change Password
-12. Monthly Statement
-0. Exit
-```
-
-The program continuously displays this menu until the user selects `0`.
+The transaction-history screen displays the latest 20 transactions.
 
 ---
 
-# 👤 1. Create New Account
+# 👤 Account Creation
 
-The account creation process collects:
+## Create New Account
+
+The account creation feature collects:
 
 * Account holder name
 * Account type
@@ -337,49 +366,61 @@ The account creation process collects:
 The system automatically generates:
 
 * Account number
-* Creation date
-* Initial transaction
+* Creation timestamp
 * Initial balance
+* Account status
 * Daily withdrawal limit
-* Active status
+* Initial transaction record
 
-### Initial Account State
+The initial account balance is:
 
 ```text
-Initial Balance: $0.00
-Status: Active
-Daily Withdrawal Limit: $10,000
+$0.00
 ```
 
-A first transaction named:
+The account is created as:
+
+```text
+Active
+```
+
+and the daily withdrawal limit is initialized to:
+
+```text
+$10,000.00
+```
+
+The first transaction is automatically recorded as:
 
 ```text
 Account Created
 ```
 
-is automatically stored in the transaction history.
+### Account Number Generation
 
-### Screenshot
+The program generates an account number using:
+
+```c
+10000 + rand() % 90000
+```
+
+This produces a five-digit account number.
+
+---
+
+# 📸 Create Account
 
 <table>
 <tr>
 <td align="center">
 
-<b>01 — Main Menu</b>
+### 02 — Create New Account
 
-<br><br>
+<img src="images/02-create-account.png" alt="Create New Account" width="850">
 
-<img src="images/01-main-menu.png" alt="Main Menu" width="500">
+<br>
 
-</td>
-
-<td align="center">
-
-<b>02 — Create New Account</b>
-
-<br><br>
-
-<img src="images/02-create-account.png" alt="Create Account" width="500">
+The screenshot demonstrates account creation, password masking, automatic account-number generation, and initial account information.
 
 </td>
 </tr>
@@ -387,16 +428,22 @@ is automatically stored in the transaction history.
 
 ---
 
-# 💵 2. Deposit Money
+# 💵 Deposit Money
 
-The deposit feature allows an active account holder to add money to the account.
+The deposit feature allows authenticated users to add money to their account.
 
-### Process
+### Deposit Workflow
 
 ```text
-Account Number
+Enter Account Number
         ↓
-Password Verification
+Find Account
+        ↓
+Check Account Status
+        ↓
+Enter Password
+        ↓
+Validate Password
         ↓
 Enter Deposit Amount
         ↓
@@ -404,42 +451,44 @@ Validate Amount
         ↓
 Update Balance
         ↓
-Create Transaction Record
+Create Transaction
         ↓
-Save to File
+Save to accounts.dat
 ```
 
-### Deposit Limit
+### Deposit Validation
 
-The maximum deposit allowed per transaction is:
+The system checks:
+
+* Account existence
+* Account status
+* Password
+* Positive amount
+* Maximum deposit limit
+
+The maximum deposit per transaction is:
 
 ```text
 $50,000
 ```
 
-The system rejects invalid amounts and deposits exceeding the limit.
+After a successful deposit, the new balance is displayed.
 
-### Screenshot
+---
+
+# 📸 Deposit Money
 
 <table>
 <tr>
 <td align="center">
 
-<b>03 — Deposit Money</b>
+### 03 — Deposit Money
 
-<br><br>
+<img src="images/03-deposit-money.png" alt="Deposit Money" width="850">
 
-<img src="images/03-deposit-money.png" alt="Deposit Money" width="500">
+<br>
 
-</td>
-
-<td align="center">
-
-<b>04 — Withdraw Money</b>
-
-<br><br>
-
-<img src="images/04-withdraw-money.png" alt="Withdraw Money" width="500">
+The system authenticates the account, accepts a valid deposit amount, updates the balance, creates a transaction record, and saves the updated account data.
 
 </td>
 </tr>
@@ -447,57 +496,86 @@ The system rejects invalid amounts and deposits exceeding the limit.
 
 ---
 
-# 💳 3. Withdraw Money
+# 💳 Withdraw Money
 
-The withdrawal system performs multiple checks before processing a transaction.
+The withdrawal feature provides several validation layers.
 
-### Validation Rules
+### Withdrawal Workflow
 
-The system checks:
+```text
+Enter Account Number
+        ↓
+Find Account
+        ↓
+Check Account Status
+        ↓
+Password Verification
+        ↓
+Check Current Date
+        ↓
+Reset Daily Counter if Required
+        ↓
+Calculate Available Daily Limit
+        ↓
+Enter Withdrawal Amount
+        ↓
+Check Balance
+        ↓
+Check Daily Limit
+        ↓
+Check Per-Transaction Limit
+        ↓
+Update Balance
+        ↓
+Record Transaction
+        ↓
+Save Data
+```
 
-* Account existence
-* Account status
-* Password
-* Available balance
-* Daily withdrawal limit
-* Per-transaction withdrawal limit
+### Withdrawal Rules
 
-### Withdrawal Limits
+The system uses:
 
 ```text
 Daily Withdrawal Limit: $10,000
 Maximum Per Transaction: $10,000
 ```
 
-The system also tracks the amount withdrawn during the current day.
-
-If a new date is detected, the daily withdrawal counter is reset automatically.
-
-### Example
+The program also tracks:
 
 ```text
-Current Balance: $8,190.00
-Daily Withdrawal Limit: $10,000.00
-Available for today: $9,900.00
-
-Enter amount to withdraw: $800
+daily_withdrawn
 ```
 
-After a successful transaction:
-
-```text
-Amount Withdrawn: $800.00
-New Balance: $7,390.00
-Remaining Daily Limit: $9,100.00
-```
+and automatically resets the daily withdrawal amount when a new date is detected.
 
 ---
 
-# 💰 4. Balance Inquiry
+# 📸 Withdraw Money
 
-Balance Inquiry displays detailed information about an account after password verification.
+<table>
+<tr>
+<td align="center">
 
-It shows:
+### 04 — Withdraw Money
+
+<img src="images/04-withdraw-money.png" alt="Withdraw Money" width="850">
+
+<br>
+
+The withdrawal screen displays the current balance, daily withdrawal limit, available amount for the day, and the resulting balance after a successful withdrawal.
+
+</td>
+</tr>
+</table>
+
+---
+
+# 💰 Balance Inquiry
+
+Balance Inquiry provides authenticated users with detailed account information.
+
+The screen displays:
 
 * Account number
 * Account holder
@@ -509,39 +587,92 @@ It shows:
 * Daily withdrawal limit
 * Today's withdrawals
 
-### Screenshot
+Password authentication is required before displaying account details.
+
+---
+
+# 📸 Balance Inquiry
+
+<table>
+<tr>
+<td align="center">
+
+### 05 — Balance Inquiry
 
 <img src="images/05-balance-inquiry.png" alt="Balance Inquiry" width="850">
 
+<br>
+
+The screen provides a complete overview of the authenticated account.
+
+</td>
+</tr>
+</table>
+
 ---
 
-# 📜 5. Transaction History
+# 📜 Transaction History
 
-Every important banking operation creates a transaction record.
+Every successful banking operation creates a transaction record.
 
-Transaction history displays:
+The transaction structure stores:
 
-| Information | Description               |
-| ----------- | ------------------------- |
-| Number      | Transaction sequence      |
-| Type        | Transaction category      |
-| Amount      | Transaction value         |
-| Balance     | Balance after transaction |
-| Date & Time | Transaction timestamp     |
+```text
+Transaction Type
+Amount
+Balance After Transaction
+Date & Time
+Description
+```
 
-Positive transactions are displayed in green while outgoing transactions are displayed in red.
+### Transaction Types
 
-The system displays up to the most recent **20 transactions** for an account.
+The application records operations such as:
 
-### Screenshot
+```text
+Account Created
+Deposit
+Withdrawal
+Transfer Sent
+Transfer Received
+```
+
+The transaction-history function displays the latest 20 transactions.
+
+### Color Coding
+
+The console interface uses:
+
+* Green for positive transactions
+* Red for outgoing transactions
+* Yellow for headings
+* Cyan for information
+
+---
+
+# 📸 Transaction History
+
+<table>
+<tr>
+<td align="center">
+
+### 06 — Transaction History
 
 <img src="images/06-transaction-history.png" alt="Transaction History" width="850">
 
+<br>
+
+The transaction history displays transaction number, type, amount, balance after transaction, and date/time.
+
+</td>
+</tr>
+</table>
+
 ---
 
-# 🔎 6. Account Search
+# 🔎 Account Search
 
-Account Search allows the user to locate an account using its account number.
+The Account Search feature allows an account to be located using its account number.
 
 The search result displays:
 
@@ -551,192 +682,328 @@ Account Holder
 Account Type
 Status
 Balance
-Created Date
+Creation Date
 Transaction Count
 ```
 
-This operation does not require the account password because it is designed as an account lookup feature.
+Unlike transaction operations, this search function does not request the account password.
 
-### Screenshot
+---
+
+# 📸 Account Search
+
+<table>
+<tr>
+<td align="center">
+
+### 07 — Account Search
 
 <img src="images/07-account-search.png" alt="Account Search" width="850">
 
----
+<br>
 
-# 🗑️ 7. Delete Account
+The application searches the in-memory account array and displays the matching account information.
 
-The delete operation is protected by password verification.
-
-Before deletion, the program displays a warning:
-
-```text
-WARNING: This action is permanent!
-```
-
-The user must explicitly confirm:
-
-```text
-Are you sure you want to delete this account? (y/n)
-```
-
-If the user enters `y`, the account is removed from the in-memory account array and the updated data is saved to `accounts.dat`.
-
-### Screenshot
-
-<img src="images/12-delete-account.png" alt="Delete Account" width="850">
+</td>
+</tr>
+</table>
 
 ---
 
-# 🔄 8. Transfer Money
+# 🔄 Transfer Money
 
-The system supports direct transfers between two registered accounts.
+The system supports transferring money from one registered account to another.
 
-### Transfer Flow
+### Transfer Workflow
 
 ```text
-Sender Account
-      ↓
-Sender Password
-      ↓
-Recipient Account
-      ↓
-Recipient Validation
-      ↓
-Balance Validation
-      ↓
-Transfer Limit Validation
-      ↓
+Sender Account Number
+        ↓
+Check Sender Account
+        ↓
+Check Sender Status
+        ↓
+Verify Sender Password
+        ↓
+Recipient Account Number
+        ↓
+Check Recipient Account
+        ↓
+Check Recipient Status
+        ↓
+Enter Transfer Amount
+        ↓
+Check Sender Balance
+        ↓
+Check Transfer Limit
+        ↓
 Deduct Sender Balance
-      ↓
-Add Recipient Balance
-      ↓
-Create Two Transaction Records
-      ↓
-Save to File
-```
-
-The sender receives:
-
-```text
-Transfer Sent
-```
-
-and the recipient receives:
-
-```text
-Transfer Received
+        ↓
+Credit Recipient Balance
+        ↓
+Create Sender Transaction
+        ↓
+Create Recipient Transaction
+        ↓
+Save Data
 ```
 
 ### Transfer Limit
 
-The maximum transfer allowed per transaction is:
+The maximum transfer amount per transaction is:
 
 ```text
 $50,000
 ```
 
-### Frozen Account Protection
+### Double-Sided Transaction Recording
 
-A transfer cannot be completed if:
+For every successful transfer, two transaction records are created.
 
-* Sender account is frozen
-* Recipient account is frozen
-* Sender account does not exist
-* Recipient account does not exist
-* Sender has insufficient balance
+Sender:
 
-### Error Handling Example
+```text
+Transfer Sent
+```
 
-<img src="images/08-transfer-frozen-account.png" alt="Transfer to Frozen Account" width="850">
+Recipient:
 
-### Successful Transfer
+```text
+Transfer Received
+```
 
-<img src="images/09-transfer-money-success.png" alt="Successful Money Transfer" width="850">
+The sender's balance decreases while the recipient's balance increases.
 
 ---
 
-# 🔒 9. Freeze / Unfreeze Account
+# 🚫 Frozen Account Protection
+
+The system prevents money transfers when the recipient account is frozen.
+
+The transfer operation checks:
+
+```c
+if(!accounts[to_index].is_active)
+```
+
+If the recipient is frozen, the transaction is rejected.
+
+This demonstrates practical conditional logic and account-status validation.
+
+---
+
+# 📸 Frozen Account Error Handling
+
+<table>
+<tr>
+<td align="center">
+
+### 08 — Transfer to Frozen Account
+
+<img src="images/08-transfer-frozen-account.png" alt="Transfer to Frozen Account" width="850">
+
+<br>
+
+The application correctly rejects a transfer when the recipient account is frozen.
+
+</td>
+</tr>
+</table>
+
+---
+
+# 📸 Successful Transfer
+
+<table>
+<tr>
+<td align="center">
+
+### 09 — Successful Money Transfer
+
+<img src="images/09-transfer-money-success.png" alt="Successful Money Transfer" width="850">
+
+<br>
+
+A successful transfer updates the sender and recipient balances and creates transaction records for both accounts.
+
+</td>
+</tr>
+</table>
+
+---
+
+# 🔒 Freeze / Unfreeze Account
 
 The system supports account status management.
 
-An account can have either:
+An account can have one of two states:
 
 ```text
 Active
-```
-
-or
-
-```text
 Frozen
 ```
 
-A frozen account cannot perform normal banking operations such as:
+When an account is frozen, banking operations such as deposits, withdrawals, and transfers are blocked.
 
-* Deposit
-* Withdrawal
-* Transfer
+### Administrative Authentication
 
-The feature requires an administrator password.
-
-### Admin Authentication
-
-The current implementation uses:
+The current source code uses:
 
 ```text
 admin123
 ```
 
-for the freeze/unfreeze administrative operation.
-
-> ⚠️ This password is hard-coded in the source code for this educational project. It should be replaced with secure credential management in a production system.
+as the administrative password for the freeze/unfreeze operation.
 
 ### Available Actions
 
 ```text
-F = Freeze
-U = Unfreeze
+F → Freeze Account
+U → Unfreeze Account
 ```
 
-### Screenshot
+The status is stored in:
 
-<img src="images/10-freeze-unfreeze-account.png" alt="Freeze and Unfreeze Account" width="850">
+```c
+int is_active;
+```
+
+where:
+
+```text
+1 = Active
+0 = Frozen
+```
 
 ---
 
-# 🔑 10. Change Password
+# 📸 Freeze / Unfreeze Account
 
-Users can change their account password.
+<table>
+<tr>
+<td align="center">
 
-### Process
+### 10 — Freeze / Unfreeze Account
+
+<img src="images/10-freeze-unfreeze-account.png" alt="Freeze Unfreeze Account" width="850">
+
+<br>
+
+Administrative authentication allows the account status to be changed between Active and Frozen.
+
+</td>
+</tr>
+</table>
+
+---
+
+# 🔑 Change Password
+
+Users can change their account password through the Change Password feature.
+
+### Password Change Workflow
 
 ```text
 Account Number
-        ↓
+      ↓
 Current Password
-        ↓
-New Password
-        ↓
+      ↓
+Validate Current Password
+      ↓
+Enter New Password
+      ↓
 Confirm New Password
-        ↓
-Password Match Check
-        ↓
-Save Updated Account
+      ↓
+Compare Passwords
+      ↓
+Update Password
+      ↓
+Save Account Data
 ```
 
-If the confirmation does not match, the operation is cancelled.
-
-### Screenshot
-
-<img src="images/11-change-password.png" alt="Change Password" width="850">
+The system rejects the operation if the new password and confirmation password do not match.
 
 ---
 
-# 📊 11. View All Accounts
+# 📸 Change Password
 
-The View All Accounts feature displays a summary of registered accounts.
+<table>
+<tr>
+<td align="center">
 
-The table includes:
+### 11 — Change Password
+
+<img src="images/11-change-password.png" alt="Change Password" width="850">
+
+<br>
+
+Passwords are entered using masked input and the new password must match the confirmation password.
+
+</td>
+</tr>
+</table>
+
+---
+
+# 🗑️ Delete Account
+
+The Delete Account feature permanently removes an account from the account array.
+
+### Deletion Process
+
+```text
+Account Number
+      ↓
+Find Account
+      ↓
+Password Verification
+      ↓
+Display Warning
+      ↓
+User Confirmation
+      ↓
+Shift Remaining Accounts
+      ↓
+Decrease Account Count
+      ↓
+Save Updated Data
+```
+
+The application asks the user to confirm the operation:
+
+```text
+Are you sure you want to delete this account? (y/n)
+```
+
+If the user enters anything other than `y`, deletion is cancelled.
+
+---
+
+# 📸 Delete Account
+
+<table>
+<tr>
+<td align="center">
+
+### 12 — Delete Account
+
+<img src="images/12-delete-account.png" alt="Delete Account" width="850">
+
+<br>
+
+The application displays a warning, verifies the account password, asks for confirmation, and then removes the account.
+
+</td>
+</tr>
+</table>
+
+---
+
+# 📋 View All Accounts
+
+The View All Accounts feature displays all registered accounts in a formatted table.
+
+The table contains:
 
 ```text
 Account Number
@@ -745,7 +1012,7 @@ Balance
 Status
 ```
 
-The system also calculates:
+The application also calculates:
 
 * Total accounts
 * Active accounts
@@ -753,53 +1020,84 @@ The system also calculates:
 * Total balance
 * Average balance
 
-### Example
+### Average Balance
+
+The system calculates:
 
 ```text
-Total Accounts: 2
-Active Accounts: 1
-Frozen Accounts: 1
-Total Balance: $8206.00
-Average Balance: $4103.00
+Average Balance =
+Total Balance / Number of Accounts
 ```
-
-### Initial Account List
-
-<img src="images/13-all-accounts-initial.png" alt="Initial All Accounts View" width="850">
-
-### Updated Account List
-
-<img src="images/14-all-accounts-updated.png" alt="Updated All Accounts View" width="850">
 
 ---
 
-# 📅 12. Monthly Statement
+# 📸 All Accounts — Initial View
 
-The Monthly Statement feature allows an account holder to request transactions for a specific month.
+<table>
+<tr>
+<td align="center">
 
-The user enters:
+### 13 — All Registered Accounts
+
+<img src="images/13-all-accounts-initial.png" alt="All Accounts Initial" width="850">
+
+<br>
+
+The initial account list displays registered accounts, balances, and account statuses.
+
+</td>
+</tr>
+</table>
+
+---
+
+# 📸 All Accounts — Updated View
+
+<table>
+<tr>
+<td align="center">
+
+### 14 — Updated Account Summary
+
+<img src="images/14-all-accounts-updated.png" alt="All Accounts Updated" width="850">
+
+<br>
+
+The updated view demonstrates changed account balances and the calculated banking statistics.
+
+</td>
+</tr>
+</table>
+
+---
+
+# 📅 Monthly Statement
+
+The Monthly Statement feature generates a transaction summary for a specific month.
+
+The user enters the month in:
 
 ```text
 YYYY-MM
 ```
 
-For example:
+format.
+
+Example:
 
 ```text
 2026-08
 ```
 
-The system searches transaction dates and displays transactions belonging to the selected month.
+The system compares the first seven characters of each transaction date with the requested month.
 
-### Statement Information
-
-The statement includes:
+### Statement Includes
 
 * Account number
 * Account holder
 * Account type
 * Transaction date
-* Transaction type
+* Transaction description/type
 * Transaction amount
 * Balance after transaction
 * Total credits
@@ -810,27 +1108,53 @@ The statement includes:
 
 ### Monthly Calculations
 
+Credits are calculated from positive transaction amounts.
+
+Debits are calculated from negative transaction amounts.
+
+The net change is:
+
 ```text
 Net Change = Total Credits - Total Debits
 ```
 
-### Screenshot
+---
+
+# 📸 Monthly Statement
+
+<table>
+<tr>
+<td align="center">
+
+### 15 — Monthly Statement
 
 <img src="images/15-monthly-statement.png" alt="Monthly Statement" width="850">
+
+<br>
+
+The monthly statement provides a month-specific summary of account activity and calculates total credits, total debits, net change, and closing balance.
+
+</td>
+</tr>
+</table>
 
 ---
 
 # 💾 File Handling
 
-Persistent storage is implemented using the binary file:
+Persistent data storage is implemented through:
 
 ```text
 accounts.dat
 ```
 
-### Loading Data
+The application uses binary file operations.
 
-When the program starts:
+---
+
+## Loading Data
+
+At program startup:
 
 ```c
 loadFromFile();
@@ -838,31 +1162,29 @@ loadFromFile();
 
 is called.
 
-The system attempts to open:
-
-```text
-accounts.dat
-```
-
-in binary read mode:
+The file is opened using:
 
 ```c
 fopen("accounts.dat", "rb");
 ```
 
-Account records are then loaded using:
+and records are loaded using:
 
 ```c
 fread()
 ```
 
-### Saving Data
+---
 
-Whenever account information changes, the program calls:
+## Saving Data
+
+When account information changes:
 
 ```c
 saveToFile();
 ```
+
+is called.
 
 The file is opened using:
 
@@ -876,212 +1198,489 @@ and account records are written using:
 fwrite()
 ```
 
-### Data Persistence Flow
+---
+
+## File Handling Flow
 
 ```text
-                 Program Starts
-                       │
-                       ▼
-                Load accounts.dat
-                       │
-                       ▼
-                Account Operations
-                       │
-             ┌─────────┼─────────┐
-             │         │         │
-             ▼         ▼         ▼
-          Deposit   Withdraw   Transfer
-             │         │         │
-             └─────────┼─────────┘
-                       ▼
-                 saveToFile()
-                       │
-                       ▼
-                  accounts.dat
+Program Starts
+      ↓
+loadFromFile()
+      ↓
+accounts.dat
+      ↓
+Load Account Records
+      ↓
+Perform Banking Operation
+      ↓
+Update Account Structure
+      ↓
+saveToFile()
+      ↓
+Write Updated Records
 ```
+
+This provides persistent storage between program executions.
 
 ---
 
 # 🔐 Password Protection
 
-The project implements masked password entry using:
+The application uses a custom password-input function:
 
 ```c
 getPassword()
 ```
 
-The function reads keyboard input character-by-character using `getch()`.
+The function uses:
 
-Instead of displaying the actual password, it prints:
+```c
+getch()
+```
+
+from `conio.h`.
+
+Instead of displaying the actual password, the console displays:
 
 ```text
 ******
 ```
 
-Password verification is performed through:
+### Password Verification
+
+The system uses:
 
 ```c
 validatePassword()
 ```
 
-which compares the entered password with the stored account password.
+to compare the entered password with the stored password.
 
-### Security Note
+The following operations require account password verification:
 
-This is an educational C console application.
-
-The current implementation stores passwords directly inside the `Account` structure and therefore does **not** use hashing or encryption.
-
-For a real banking application, passwords should never be stored as plaintext. A production system should use secure password hashing, access control, encryption, and a proper authentication architecture.
+* Deposit
+* Withdrawal
+* Balance inquiry
+* Transaction history
+* Delete account
+* Transfer
+* Change password
+* Monthly statement
 
 ---
 
-# 🛡️ Error Handling & Validation
+# 🛡️ Input Validation
 
-The system includes multiple validation checks.
+The application provides reusable validation functions.
 
-## Account Validation
+### Integer Validation
 
-```text
-Account not found
-Invalid account number
-Frozen account
-Invalid password
+```c
+getValidInt()
 ```
 
-## Deposit Validation
+This function accepts:
+
+* Prompt
+* Minimum value
+* Maximum value
+
+For example, account numbers are restricted to:
 
 ```text
-Invalid amount
-Amount below minimum
-Deposit exceeds $50,000
-Frozen account
+10000 - 99999
 ```
 
-## Withdrawal Validation
+---
+
+### Floating-Point Validation
+
+```c
+getValidFloat()
+```
+
+This function ensures that the entered amount is at least the required minimum.
+
+For monetary input, the minimum is generally:
 
 ```text
-Insufficient balance
-Daily withdrawal limit exceeded
-Per-transaction limit exceeded
-Frozen account
-Invalid password
+0.01
 ```
 
-## Transfer Validation
+---
+
+### Password Input
+
+```c
+getPassword()
+```
+
+provides masked password input and supports:
+
+* Character entry
+* Backspace
+* Enter key
+* Maximum password length
+
+---
+
+# ⚠️ Error Handling
+
+The application handles multiple invalid situations.
+
+### Account Errors
 
 ```text
-Sender account not found
-Recipient account not found
-Sender account frozen
-Recipient account frozen
-Insufficient balance
-Transfer exceeds $50,000
-Invalid password
+Account not found!
+Account is FROZEN!
 ```
 
-## Password Validation
+### Authentication Errors
 
 ```text
-Invalid current password
-New password mismatch
+Invalid password!
+Invalid admin password!
 ```
 
-## Account Deletion
+### Financial Errors
 
 ```text
-Account not found
-Invalid password
-Deletion confirmation
+Insufficient balance!
+Daily withdrawal limit exceeded!
+Maximum per transaction is $10,000!
+Maximum deposit per transaction is $50,000!
+Maximum transfer per transaction is $50,000!
 ```
+
+### Transfer Errors
+
+```text
+Sender account not found!
+Recipient account not found!
+Your account is FROZEN!
+Recipient account is FROZEN!
+```
+
+### Password Errors
+
+```text
+Passwords do not match!
+```
+
+These checks prevent invalid operations from modifying account data.
 
 ---
 
 # 🎨 Console Interface
 
-The application uses the Windows console API:
+The application uses Windows console functionality to create a colored and structured user interface.
+
+The project defines the following color constants:
 
 ```c
-#include <windows.h>
+#define COLOR_WHITE 15
+#define COLOR_YELLOW 14
+#define COLOR_GREEN 10
+#define COLOR_RED 12
+#define COLOR_CYAN 11
+#define COLOR_MAGENTA 13
+#define COLOR_BLUE 9
+#define COLOR_GRAY 8
 ```
 
-and:
+The function:
+
+```c
+setColor()
+```
+
+uses:
 
 ```c
 SetConsoleTextAttribute()
 ```
 
-to create a colored terminal interface.
+to change the console text color.
 
-Different colors are used for different types of information:
+---
+
+## 🎨 Color Usage
 
 | Color   | Purpose                            |
 | ------- | ---------------------------------- |
+| White   | General information                |
+| Yellow  | Headings and important information |
 | Green   | Successful operations              |
 | Red     | Errors and warnings                |
-| Cyan    | Input prompts / informational data |
-| Yellow  | Important information              |
-| Blue    | Menu categories                    |
-| Magenta | Additional system sections         |
-| Gray    | Secondary information              |
-
-The application also uses formatted headers such as:
-
-```text
-+====================================================+
-|                                                    |
-|             ADVANCED BANKING SYSTEM                |
-|                                                    |
-+====================================================+
-```
+| Cyan    | Input and informational messages   |
+| Magenta | Menu sections                      |
+| Blue    | Additional menu options            |
+| Gray    | Secondary prompts                  |
 
 ---
 
 # 🧩 Important Functions
 
-The program is divided into reusable functions.
+The project is organized into dedicated functions.
+
+### Interface Functions
 
 ```c
 setColor()
 resetColor()
 displayHeader()
-
-createAccount()
-depositMoney()
-withdrawMoney()
-balanceInquiry()
-transactionHistory()
-accountSearch()
-deleteAccount()
-transferMoney()
-viewAllAccounts()
-freezeAccount()
-changePassword()
-monthlyStatement()
-
-saveToFile()
-loadFromFile()
-
-findAccount()
-validatePassword()
-
-getCurrentDate()
-getValidInt()
-getValidFloat()
-getPassword()
-
 clearScreen()
 pauseScreen()
 ```
 
-This function-based organization keeps each banking operation separated and easier to maintain.
+### Input Functions
+
+```c
+getValidInt()
+getValidFloat()
+getPassword()
+```
+
+### Date Function
+
+```c
+getCurrentDate()
+```
+
+### File Functions
+
+```c
+loadFromFile()
+saveToFile()
+```
+
+### Account Functions
+
+```c
+createAccount()
+accountSearch()
+deleteAccount()
+viewAllAccounts()
+freezeAccount()
+changePassword()
+```
+
+### Banking Functions
+
+```c
+depositMoney()
+withdrawMoney()
+balanceInquiry()
+transferMoney()
+transactionHistory()
+monthlyStatement()
+```
+
+### Authentication / Search
+
+```c
+findAccount()
+validatePassword()
+```
+
+---
+
+# 🔄 Function Interaction
+
+```text
+                    main()
+                      │
+                      ▼
+                loadFromFile()
+                      │
+                      ▼
+                 Main Menu
+                      │
+        ┌─────────────┼──────────────┐
+        │             │              │
+        ▼             ▼              ▼
+ createAccount   Banking Functions  Management
+        │             │              │
+        │        ┌────┼────┐         │
+        │        │    │    │         │
+        │        ▼    ▼    ▼         ▼
+        │     Deposit Withdraw Transfer
+        │        │    │    │       │
+        └────────┴────┴────┴───────┘
+                     │
+                     ▼
+                saveToFile()
+                     │
+                     ▼
+                accounts.dat
+```
+
+---
+
+# 📏 Banking Rules & Limits
+
+| Feature                            | Current Rule      |
+| ---------------------------------- | ----------------- |
+| Maximum accounts                   | 100               |
+| Transactions per account           | 200               |
+| Displayed transaction history      | Latest 20         |
+| Account number range               | 10000–99999       |
+| Initial balance                    | $0.00             |
+| Daily withdrawal limit             | $10,000           |
+| Maximum withdrawal per transaction | $10,000           |
+| Maximum deposit per transaction    | $50,000           |
+| Maximum transfer per transaction   | $50,000           |
+| Minimum transaction amount         | $0.01             |
+| Account status                     | Active / Frozen   |
+| Account types                      | Savings / Current |
+| Monthly format                     | YYYY-MM           |
+
+---
+
+# 🧪 Demonstrated Test Scenarios
+
+The screenshots included in this repository demonstrate several working scenarios.
+
+### Account Management
+
+* Create an account
+* Search an account
+* View all accounts
+* Delete an account
+* Change password
+
+### Banking
+
+* Deposit money
+* Withdraw money
+* Transfer money
+* Check account balance
+
+### Transaction Management
+
+* Record deposits
+* Record withdrawals
+* Record transfers
+* Display transaction history
+* Generate monthly statements
+
+### Security & Validation
+
+* Password verification
+* Masked password input
+* Frozen account protection
+* Admin authentication
+* Insufficient balance protection
+* Transaction limit protection
+
+---
+
+# 📸 Complete Application Showcase
+
+The following images represent the complete working flow of the application.
+
+---
+
+## 01 — Main Menu
+
+<img src="images/01-main-menu.png" alt="Main Menu" width="850">
+
+---
+
+## 02 — Create New Account
+
+<img src="images/02-create-account.png" alt="Create Account" width="850">
+
+---
+
+## 03 — Deposit Money
+
+<img src="images/03-deposit-money.png" alt="Deposit Money" width="850">
+
+---
+
+## 04 — Withdraw Money
+
+<img src="images/04-withdraw-money.png" alt="Withdraw Money" width="850">
+
+---
+
+## 05 — Balance Inquiry
+
+<img src="images/05-balance-inquiry.png" alt="Balance Inquiry" width="850">
+
+---
+
+## 06 — Transaction History
+
+<img src="images/06-transaction-history.png" alt="Transaction History" width="850">
+
+---
+
+## 07 — Account Search
+
+<img src="images/07-account-search.png" alt="Account Search" width="850">
+
+---
+
+## 08 — Frozen Account Transfer Protection
+
+<img src="images/08-transfer-frozen-account.png" alt="Frozen Account Transfer Protection" width="850">
+
+---
+
+## 09 — Successful Money Transfer
+
+<img src="images/09-transfer-money-success.png" alt="Successful Transfer" width="850">
+
+---
+
+## 10 — Freeze / Unfreeze Account
+
+<img src="images/10-freeze-unfreeze-account.png" alt="Freeze Unfreeze Account" width="850">
+
+---
+
+## 11 — Change Password
+
+<img src="images/11-change-password.png" alt="Change Password" width="850">
+
+---
+
+## 12 — Delete Account
+
+<img src="images/12-delete-account.png" alt="Delete Account" width="850">
+
+---
+
+## 13 — All Accounts Initial View
+
+<img src="images/13-all-accounts-initial.png" alt="All Accounts Initial" width="850">
+
+---
+
+## 14 — All Accounts Updated View
+
+<img src="images/14-all-accounts-updated.png" alt="All Accounts Updated" width="850">
+
+---
+
+## 15 — Monthly Statement
+
+<img src="images/15-monthly-statement.png" alt="Monthly Statement" width="850">
+
+---
+
+## 16 — Exit Screen
+
+<img src="images/16-thank-you-exit.png" alt="Thank You Exit Screen" width="850">
 
 ---
 
 # 🗂️ Project Structure
 
 ```text
-Task 2 Banking Management System/
+Task 6 Banking System/
 │
 ├── 📁 images/
 │   │
@@ -1104,90 +1703,22 @@ Task 2 Banking Management System/
 │
 ├── 📄 main.c
 ├── 📄 README.md
-│
-└── 📄 accounts.dat
-    └── Generated automatically when the program runs
+└── 💾 accounts.dat
 ```
 
-> `accounts.dat` is generated at runtime by the application. It does not need to be manually created before the first run.
+### Runtime File
 
----
+`accounts.dat` is generated automatically by the program when account data is saved.
 
-# 🛠️ Technologies Used
-
-### Programming Language
-
-```text
-C
-```
-
-### Libraries
-
-```c
-stdio.h
-stdlib.h
-string.h
-time.h
-ctype.h
-conio.h
-windows.h
-```
-
-### Concepts
-
-```text
-Structures
-Nested Structures
-Functions
-Arrays
-Pointers
-File Handling
-Binary Files
-String Handling
-Conditional Statements
-Loops
-Input Validation
-Password Handling
-Date & Time
-Console Formatting
-```
-
----
-
-# 💻 Requirements
-
-The current source uses:
-
-```c
-#include <conio.h>
-#include <windows.h>
-```
-
-and Windows-specific console functions.
-
-Therefore, the application is designed primarily for:
-
-```text
-Windows
-```
-
-A compiler/environment with support for these headers is required.
-
-Recommended environments include:
-
-* Code::Blocks with MinGW
-* Dev-C++
-* MinGW GCC
-* Visual Studio configured for C
-* VS Code with a Windows C compiler
+It does not need to be manually created before running the application.
 
 ---
 
 # ▶️ How to Run
 
-## Option 1 — GCC / MinGW
+## Windows + GCC / MinGW
 
-Open Command Prompt or the VS Code terminal inside the project folder.
+Open a terminal inside the project directory.
 
 Compile:
 
@@ -1203,7 +1734,7 @@ banking.exe
 
 ---
 
-## Option 2 — Code::Blocks
+## Code::Blocks
 
 1. Open Code::Blocks.
 2. Create or open a C project.
@@ -1214,747 +1745,274 @@ banking.exe
 
 ---
 
-# 🔄 Application Workflow
+# 🖥️ Platform Compatibility
+
+The current implementation is designed for **Windows**.
+
+The source uses:
+
+```c
+#include <conio.h>
+#include <windows.h>
+```
+
+and Windows-specific functions such as:
+
+```c
+SetConsoleTextAttribute()
+GetStdHandle()
+```
+
+Therefore, a Windows-compatible C compiler/environment is recommended.
+
+---
+
+# 🧠 C Programming Concepts Demonstrated
+
+<table>
+<tr>
+<td>
+
+### Core Concepts
+
+* Structures
+* Nested structures
+* Arrays
+* Functions
+* Function prototypes
+* Global variables
+* Conditional statements
+* Switch statements
+* Loops
+
+</td>
+
+<td>
+
+### Practical Concepts
+
+* File handling
+* Binary files
+* String manipulation
+* Input validation
+* Password masking
+* Authentication
+* Date/time processing
+* Transaction processing
+* Console formatting
+
+</td>
+</tr>
+</table>
+
+---
+
+# 💡 Learning Outcomes
+
+This project demonstrates practical understanding of how structured programming can be used to develop a real-world-style application.
+
+### After completing this project, the following concepts are demonstrated:
 
 ```text
-                 ┌───────────────────┐
-                 │   Start Program   │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │ Load accounts.dat │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │    Main Menu      │
-                 └─────────┬─────────┘
-                           │
-          ┌────────────────┼─────────────────┐
-          │                │                 │
-          ▼                ▼                 ▼
-     Account Setup     Transactions      Management
-          │                │                 │
-          ├─ Create        ├─ Deposit        ├─ Search
-          ├─ Search        ├─ Withdraw       ├─ View All
-          └─ Delete        ├─ Transfer       ├─ Freeze
-                           └─ Balance        └─ Password
-                                  │
-                                  ▼
-                         Transaction Records
-                                  │
-                                  ▼
-                            Save to File
-                                  │
-                                  ▼
-                           accounts.dat
+✓ Creating custom structures
+✓ Nesting structures
+✓ Managing arrays of structures
+✓ Passing structures to functions
+✓ Searching records
+✓ Updating records
+✓ Deleting records
+✓ Reading binary files
+✓ Writing binary files
+✓ Validating user input
+✓ Protecting account operations with passwords
+✓ Recording transaction history
+✓ Managing account status
+✓ Processing date and time
+✓ Building a menu-driven application
+✓ Designing reusable functions
+✓ Handling invalid operations
 ```
 
 ---
 
-# 📸 Complete Application Screenshots
-
-The following screenshots demonstrate the actual working application.
-
----
-
-## 🖥️ Main Menu
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 01 — Advanced Banking System Main Menu
-
-<img src="images/01-main-menu.png" alt="Advanced Banking System Main Menu" width="850">
-
-<p>The main menu provides access to all banking and account-management operations.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 👤 Account Creation
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 02 — Create New Account
-
-<img src="images/02-create-account.png" alt="Create New Account" width="850">
-
-<p>A new account is created with an automatically generated account number, account type, password, timestamp, and initial transaction.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 💵 Deposit
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 03 — Deposit Money
-
-<img src="images/03-deposit-money.png" alt="Deposit Money" width="850">
-
-<p>Authenticated users can deposit money into an active account.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 💳 Withdrawal
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 04 — Withdraw Money
-
-<img src="images/04-withdraw-money.png" alt="Withdraw Money" width="850">
-
-<p>The withdrawal system checks balance, daily limits, transaction limits, account status, and password.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 💰 Balance Inquiry
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 05 — Balance Inquiry
-
-<img src="images/05-balance-inquiry.png" alt="Balance Inquiry" width="850">
-
-<p>Displays detailed account information including balance, account status, transaction count, and withdrawal statistics.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 📜 Transaction History
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 06 — Transaction History
-
-<img src="images/06-transaction-history.png" alt="Transaction History" width="850">
-
-<p>Displays recorded banking transactions with amounts, balances, transaction types, and timestamps.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 🔎 Account Search
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 07 — Account Search
-
-<img src="images/07-account-search.png" alt="Account Search" width="850">
-
-<p>Searches for an account using its account number and displays the matching account information.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 🔒 Frozen Account Protection
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 08 — Transfer to Frozen Account
-
-<img src="images/08-transfer-frozen-account.png" alt="Transfer to Frozen Account" width="850">
-
-<p>The system correctly blocks transfers when the recipient account is frozen.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 🔄 Successful Transfer
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 09 — Successful Money Transfer
-
-<img src="images/09-transfer-money-success.png" alt="Successful Money Transfer" width="850">
-
-<p>A successful transfer updates both accounts and records the transfer in transaction history.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 🔐 Freeze / Unfreeze
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 10 — Freeze / Unfreeze Account
-
-<img src="images/10-freeze-unfreeze-account.png" alt="Freeze Unfreeze Account" width="850">
-
-<p>Administrative account status management allows accounts to be frozen or unfrozen.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 🔑 Change Password
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 11 — Change Password
-
-<img src="images/11-change-password.png" alt="Change Password" width="850">
-
-<p>Users can securely verify their current password and set a new password.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 🗑️ Delete Account
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 12 — Delete Account
-
-<img src="images/12-delete-account.png" alt="Delete Account" width="850">
-
-<p>The system verifies the password and asks for explicit confirmation before permanently deleting an account.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 📋 All Accounts — Initial View
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 13 — All Registered Accounts
-
-<img src="images/13-all-accounts-initial.png" alt="All Accounts Initial View" width="850">
-
-<p>Displays registered accounts with their balances and active/frozen status.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 📊 All Accounts — Updated View
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 14 — Updated Account Summary
-
-<img src="images/14-all-accounts-updated.png" alt="All Accounts Updated View" width="850">
-
-<p>Displays updated balances and calculates total accounts, active accounts, frozen accounts, total balance, and average balance.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 📅 Monthly Statement
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 15 — Monthly Statement
-
-<img src="images/15-monthly-statement.png" alt="Monthly Statement" width="850">
-
-<p>Generates a month-specific transaction summary with credits, debits, net change, closing balance, and transaction count.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-## 👋 Exit Screen
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 16 — Thank You / Exit
-
-<img src="images/16-thank-you-exit.png" alt="Thank You Exit Screen" width="850">
-
-<p>The application saves the latest account data before displaying the final exit message.</p>
-
-</td>
-</tr>
-</table>
-
----
-
-# 🧪 Tested Scenarios
-
-The application has been demonstrated with the following scenarios:
-
-### Account Management
-
-* Account creation
-* Account search
-* Account deletion
-* View all accounts
-
-### Banking Operations
-
-* Deposit
-* Withdrawal
-* Balance inquiry
-* Money transfer
-
-### Security & Control
-
-* Password verification
-* Password change
-* Freeze account
-* Unfreeze account
-* Frozen-account transaction rejection
-
-### Reporting
-
-* Transaction history
-* Monthly statement
-* Account statistics
-
-### Error Handling
-
-* Invalid account number
-* Invalid password
-* Insufficient balance
-* Frozen account
-* Invalid transaction amount
-* Withdrawal limit exceeded
-* Transfer limit exceeded
-* Invalid menu choice
-
----
-
-# 📏 Banking Rules Implemented
-
-| Rule                               | Limit / Behavior  |
-| ---------------------------------- | ----------------- |
-| Account number input               | 10000–99999       |
-| Maximum accounts                   | 100               |
-| Transactions per account           | 200               |
-| Transaction history display        | Latest 20         |
-| Initial balance                    | $0.00             |
-| Daily withdrawal limit             | $10,000           |
-| Maximum withdrawal per transaction | $10,000           |
-| Maximum deposit per transaction    | $50,000           |
-| Maximum transfer per transaction   | $50,000           |
-| Account status                     | Active / Frozen   |
-| Account type                       | Savings / Current |
-| Password input                     | Masked with `*`   |
-| Monthly statement format           | `YYYY-MM`         |
-
----
-
-# 🧠 Programming Concepts Demonstrated
-
-## Structures
-
-The application uses custom structures to model accounts and transactions.
-
-```c
-typedef struct {
-    ...
-} Transaction;
-
-typedef struct {
-    ...
-} Account;
-```
-
----
-
-## Nested Structures
-
-Each `Account` contains an array of `Transaction` structures:
-
-```c
-Transaction transactions[200];
-```
-
-This demonstrates how complex records can be represented using nested structures.
-
----
-
-## Functions
-
-Each major operation is implemented as a separate function.
-
-For example:
-
-```c
-createAccount();
-depositMoney();
-withdrawMoney();
-transferMoney();
-transactionHistory();
-monthlyStatement();
-```
-
-This improves modularity and code organization.
-
----
-
-## File Handling
-
-The project uses binary file handling:
-
-```c
-fopen()
-fread()
-fwrite()
-fclose()
-```
-
-to provide persistent storage.
-
----
-
-## Conditional Logic
-
-The application makes extensive use of:
-
-```c
-if
-else
-switch
-```
-
-for:
-
-* Authentication
-* Account status
-* Transaction validation
-* Balance checks
-* Limits
-* Menu navigation
-* Confirmation handling
-
----
-
-## Loops
-
-Loops are used for:
-
-* Menu repetition
-* Input validation
-* Account searching
-* Transaction history
-* Monthly statement generation
-* Displaying all accounts
-
----
-
-## String Handling
-
-The project uses standard C string functions including:
-
-```c
-strcpy()
-strcmp()
-strlen()
-strncpy()
-strcspn()
-sprintf()
-```
-
----
-
-## Date & Time
-
-The application uses:
-
-```c
-time.h
-```
-
-and:
-
-```c
-time()
-localtime()
-strftime()
-```
-
-to generate timestamps for accounts and transactions.
-
----
-
-# ⚙️ Design Decisions
-
-### Fixed-Size Storage
-
-The system uses arrays with predefined capacities:
-
-```c
-Account accounts[100];
-```
-
-and:
-
-```c
-Transaction transactions[200];
-```
-
-This keeps the implementation straightforward for a C programming internship task.
-
-### Binary Storage
-
-Binary storage is used instead of text files so complete structures can be written and read directly.
-
-### Function-Based Architecture
-
-Each operation is isolated into a function, making the code easier to understand and maintain.
-
-### Console-Based UI
-
-The project intentionally uses a console interface to focus on core C programming concepts rather than GUI development.
-
----
-
-# ⚠️ Current Limitations
-
-This project is designed as an educational C programming application and is **not intended for real banking use**.
-
-Current limitations include:
-
-* Passwords are stored as plaintext inside the account structure.
-* The administrative password is hard-coded.
-* Account numbers are randomly generated without a dedicated collision-check mechanism.
+# ⚠️ Security & Educational Limitations
+
+This project is designed for **educational and internship purposes** and should not be considered a production banking system.
+
+### Current limitations include:
+
+* Passwords are stored directly in the `Account` structure.
+* Passwords are not cryptographically hashed.
+* The administrative password is hard-coded as `admin123`.
+* Account numbers are randomly generated.
+* The current code does not explicitly perform a duplicate account-number check.
+* Account storage uses fixed-size arrays.
+* Transaction storage uses a fixed limit of 200 records per account.
 * Data is stored in a local binary file.
-* The application is Windows-specific because of `conio.h` and `windows.h`.
-* The system uses fixed-size arrays rather than dynamic memory allocation.
-* There is no database backend.
-* There is no network authentication.
-* There is no encryption.
-* There is no multi-user or concurrent access control.
+* There is no database server.
+* There is no encryption layer.
+* There is no network communication.
+* The application is Windows-specific.
 
-These limitations are acceptable for demonstrating structures, functions, file handling, validation, and procedural programming in C.
+These limitations are acceptable for demonstrating C programming concepts, structures, file handling, functions, and conditional logic in an internship project.
 
 ---
 
-# 🚀 Possible Future Improvements
+# 🚀 Possible Future Enhancements
 
-The project can be further enhanced with:
+The system can be extended with:
 
 * Secure password hashing
-* Encrypted account storage
+* Encrypted account files
 * Database integration
+* SQLite/MySQL support
 * Dynamic memory allocation
-* Duplicate account-number detection
-* Admin login system
-* User login dashboard
+* Duplicate account-number prevention
+* Stronger password rules
+* Login attempt limits
+* Admin dashboard
+* Role-based access control
+* Account statements exported to PDF
+* Transaction receipt generation
 * Interest calculation for savings accounts
 * Beneficiary management
-* Transfer receipts
-* Account statements exported to files
-* ATM-style interface
-* Login attempt limits
-* Audit logs
+* Account-to-account transfer confirmation
 * Backup and restore functionality
+* Audit logs
 * Cross-platform console support
-* GUI implementation
-* SQLite/MySQL integration
+* Graphical user interface
 
 ---
 
-# 📚 Learning Outcomes
-
-Through this project, the following practical concepts are demonstrated:
+# 🧪 Example Banking Flow
 
 ```text
-✔ Structures
-✔ Nested Structures
-✔ Arrays
-✔ Functions
-✔ Function Prototypes
-✔ Conditional Logic
-✔ Switch Statements
-✔ Loops
-✔ String Handling
-✔ File Handling
-✔ Binary Files
-✔ Password Input
-✔ Authentication
-✔ Input Validation
-✔ Error Handling
-✔ Date & Time
-✔ Transaction Processing
-✔ Data Persistence
-✔ Console UI Design
-```
-
----
-
-# 🎓 Internship Context
-
-**Program:** InternGrow Internship
-
-**Task:** Task 2 — Banking Management System
-
-**Week:** Week 2
-
-**Language:** C
-
-**Task Focus:**
-
-```text
-Structures
-File Handling
-Functions
-Conditional Logic
-Password Protection
-Error Handling
-```
-
-This project extends the required task by implementing additional banking operations and management features while maintaining a procedural C programming approach.
-
----
-
-# 📌 Quick Feature Summary
-
-```text
-╔════════════════════════════════════════════════════╗
-║           ADVANCED BANKING SYSTEM                  ║
-╠════════════════════════════════════════════════════╣
-║                                                    ║
-║  👤 Create New Account                             ║
-║  💵 Deposit Money                                  ║
-║  💳 Withdraw Money                                 ║
-║  💰 Balance Inquiry                                ║
-║  📜 Transaction History                            ║
-║  🔎 Account Search                                 ║
-║  🗑️ Delete Account                                 ║
-║  🔄 Transfer Money                                 ║
-║  📋 View All Accounts                              ║
-║  🔒 Freeze / Unfreeze Account                      ║
-║  🔑 Change Password                                ║
-║  📅 Monthly Statement                              ║
-║  💾 Binary File Storage                            ║
-║  🛡️ Input Validation & Error Handling              ║
-║                                                    ║
-╚════════════════════════════════════════════════════╝
+                 CREATE ACCOUNT
+                       │
+                       ▼
+              Account # Generated
+                       │
+                       ▼
+                 Initial Balance
+                    $0.00
+                       │
+                       ▼
+                  DEPOSIT
+                       │
+                       ▼
+              Balance Increased
+                       │
+                       ▼
+                 WITHDRAWAL
+                       │
+                       ▼
+              Balance Decreased
+                       │
+                       ▼
+                  TRANSFER
+                       │
+              ┌────────┴────────┐
+              ▼                 ▼
+       Sender Balance      Receiver Balance
+          Decreased             Increased
+              │                 │
+              └────────┬────────┘
+                       ▼
+               TRANSACTION HISTORY
+                       │
+                       ▼
+                MONTHLY STATEMENT
 ```
 
 ---
 
 # 🏁 Conclusion
 
-The **Advanced Banking Management System** demonstrates how core C programming concepts can be combined to build a practical, menu-driven application.
+The **Advanced Banking Management System** combines fundamental C programming concepts with a practical banking scenario.
 
-Starting from the basic requirements of account creation, deposits, withdrawals, balance inquiry, transaction history, account search, file storage, password protection, and error handling, the project extends the functionality with money transfers, account status management, password changes, account statistics, daily withdrawal controls, and monthly statements.
-
-The result is a structured console application that demonstrates practical use of **structures, functions, arrays, file handling, validation, conditional logic, transaction processing, and persistent data storage**.
-
----
-
-<p align="center">
-
-### 🏦 Advanced Banking Management System
-
-<b>Built with C • Structures • Functions • File Handling</b>
-
-<br><br>
-
-⭐ <b>InternGrow Internship — Task 2</b> ⭐
-
-</p>
-
----
-
-## 📁 Repository Structure Reference
+The project goes beyond basic account creation and balance management by implementing:
 
 ```text
-InternGrow_Internship/
-│
-└── Task 2 Banking Management System/
-    │
-    ├── images/
-    │   ├── 01-main-menu.png
-    │   ├── 02-create-account.png
-    │   ├── 03-deposit-money.png
-    │   ├── 04-withdraw-money.png
-    │   ├── 05-balance-inquiry.png
-    │   ├── 06-transaction-history.png
-    │   ├── 07-account-search.png
-    │   ├── 08-transfer-frozen-account.png
-    │   ├── 09-transfer-money-success.png
-    │   ├── 10-freeze-unfreeze-account.png
-    │   ├── 11-change-password.png
-    │   ├── 12-delete-account.png
-    │   ├── 13-all-accounts-initial.png
-    │   ├── 14-all-accounts-updated.png
-    │   ├── 15-monthly-statement.png
-    │   └── 16-thank-you-exit.png
-    │
-    ├── main.c
-    └── README.md
+Account Management
+        +
+Banking Transactions
+        +
+Password Protection
+        +
+Transaction History
+        +
+File Persistence
+        +
+Account Status Management
+        +
+Monthly Reporting
+        +
+Input Validation
+        +
+Error Handling
 ```
 
-> **Runtime file:** `accounts.dat` is created automatically by the application when account data is saved.
+Through structures, functions, arrays, binary file handling, conditional logic, loops, string operations, and date/time functions, the application provides a complete educational demonstration of structured C programming.
+
+The project also demonstrates how account data can be maintained persistently through `accounts.dat`, while transaction records remain associated with their respective accounts.
+
+---
+
+# 👩‍💻 Project Information
+
+| Information      | Details                            |
+| ---------------- | ---------------------------------- |
+| Project          | Advanced Banking Management System |
+| Language         | C                                  |
+| Type             | Console Application                |
+| Platform         | Windows                            |
+| Storage          | Binary File                        |
+| Main Source File | `main.c`                           |
+| Data File        | `accounts.dat`                     |
+| Documentation    | `README.md`                        |
+| Screenshots      | `images/`                          |
+
+---
+
+# ⭐ Project Highlights
+
+```text
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║          🏦 ADVANCED BANKING SYSTEM                 ║
+║                                                      ║
+║   👤 Account Management                              ║
+║   💵 Deposit & Withdrawal                            ║
+║   🔄 Money Transfer                                  ║
+║   💰 Balance Inquiry                                 ║
+║   📜 Transaction History                             ║
+║   🔎 Account Search                                  ║
+║   🔒 Freeze / Unfreeze                               ║
+║   🔑 Password Management                             ║
+║   📅 Monthly Statements                              ║
+║   💾 Binary File Storage                             ║
+║   🛡️ Input Validation                               ║
+║   ⚠️ Error Handling                                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+# 👋 Exit
+
+<p align="center">
+  <img src="images/16-thank-you-exit.png" alt="Thank You for Using Banking System" width="850">
+</p>
+
+<p align="center">
+  <b>Thank you for using the Advanced Banking Management System!</b>
+</p>
+
+<p align="center">
+  Built with C • Structures • Functions • File Handling
+</p>
+
+<p align="center">
+  ⭐ Banking Management System ⭐
+</p>
