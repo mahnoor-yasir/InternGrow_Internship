@@ -1,1013 +1,430 @@
-# Hospital Management System in C
+<div align="center">
 
-A console-based Hospital Management System developed in C as part of the InternGrow Internship Task 6.
+# 🏥 Hospital Management System
 
-The system provides a complete menu-driven environment for managing patients, appointments, billing, payments, hospital wards, reports, and persistent data storage.
+### A Complete Console-Based Hospital Administration Solution in C
 
-The project is implemented in a single C source file and demonstrates important C programming concepts including structures, pointers, dynamic memory allocation, file handling, searching, sorting, input validation, and error handling.
+[![Language](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![Version](https://img.shields.io/badge/Version-2.0-00B894?style=for-the-badge)](#)
+[![Platform](https://img.shields.io/badge/Platform-Console-2D3436?style=for-the-badge&logo=windows-terminal&logoColor=white)](#)
+[![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)](#)
+[![Internship](https://img.shields.io/badge/InternGrow-Task%206-6C5CE7?style=for-the-badge)](#)
+
+**A feature-rich, menu-driven Hospital Management System developed in C as part of InternGrow Internship Task 6. It provides an organized and efficient solution for managing patients, doctors, appointments, wards, billing, medical records, reports, and persistent hospital data.**
+
+[Features](#-key-features) • [Modules](#-system-modules) • [Installation](#-installation-and-setup) • [Screenshots](#-project-screenshots) • [Author](#-author)
+
+</div>
 
 ---
 
-## Project Overview
+## 📌 Project Overview
 
-The Hospital Management System is designed to manage basic hospital operations through a command-line interface.
+The **Hospital Management System** is a console-based application designed to automate essential hospital operations. The project demonstrates practical implementation of core C programming concepts, including structures, pointers, dynamic memory allocation, file handling, searching, sorting, input validation, error handling, and modular programming.
 
-It allows hospital staff to:
+The system offers separate modules for patients, appointments, doctors, wards, billing, medical records, reporting, and data management. Records can be stored in binary files, backed up, restored, imported, and exported for future use.
 
-- Register new patients
-- Update patient information
-- Discharge patients
-- Search patients
-- View detailed patient records
-- Schedule appointments
-- Complete or cancel appointments
-- Generate patient bills
+> **Project Type:** Internship Capstone Project  
+> **Internship:** InternGrow  
+> **Task:** Task 6 — Hospital Management System  
+> **Programming Language:** C  
+> **Version:** 2.0
+
+---
+
+## ✨ Key Features
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 👤 Patient Management
+
+- Add complete patient records
+- Update existing patient information
+- View all registered patients
+- Search patients using multiple filters
+- View detailed patient profiles
+- Discharge or remove patients
+
+</td>
+<td width="50%" valign="top">
+
+### 📅 Appointment Management
+
+- Schedule new appointments
+- View all appointments
+- Mark appointments as completed
+- Cancel scheduled appointments
+- View appointments by patient ID
+- Track appointment status and reason
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 💳 Billing and Payments
+
+- Calculate hospital charges
+- Generate detailed patient bills
 - Process payments
-- View payment history
-- Generate hospital reports
-- Manage doctors and wards
-- Save and load patient data
-- Create backups
-- Restore backup data
-- Import and export patient information using CSV files
-- View dynamic memory usage
-- Sort patient records using different sorting techniques
+- Maintain payment history
+- Generate invoices
+- Track total hospital revenue
 
-The application uses a structured menu system with colored console output for better usability.
+</td>
+<td width="50%" valign="top">
 
----
+### 🩺 Medical Records
 
-## Features
+- Add diagnoses and prescriptions
+- Store laboratory test results
+- View patient medical records
+- Update existing medical records
+- Review complete patient history
+- Date-stamped medical entries
 
-### 1. Patient Management
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-The patient management module provides complete CRUD-style operations for patient records.
+### 👨‍⚕️ Doctor and Ward Management
 
-Available operations include:
+- Add, view, update, and delete doctors
+- Assign doctors to patients
+- Track doctor availability
+- View ward occupancy and capacity
+- Update ward information
+- View patients assigned to each ward
 
-- Add Patient
-- Update Patient
-- Delete/Discharge Patient
-- View All Patients
-- Search Patient
-- View Patient Details
+</td>
+<td width="50%" valign="top">
 
-Each patient record contains:
+### 📊 Reports and Data Management
 
-- Patient ID
-- Name
-- Age
-- Gender
-- Disease
-- Assigned Doctor
-- Ward
-- Room
-- Admission Date
-- Discharge Date
-- Bill Amount
-- Patient Status
+- Daily and monthly reports
+- Doctor, ward, disease, and revenue reports
+- Patient summary reports
+- Binary-file data persistence
+- Backup and restore support
+- CSV/JSON export and CSV import
 
-Patient IDs are automatically generated by the system.
-
----
-
-### 2. Patient Search
-
-The system supports multiple search methods.
-
-#### Search by ID
-
-Patient IDs are searched using a binary search approach.
-
-The implementation creates an index array, sorts the indexes by patient ID, and then performs binary search.
-
-#### Search by Name
-
-Patient names are searched using linear search.
-
-The comparison is case-insensitive.
-
-#### Search by Disease
-
-The system can display all patients diagnosed with a specific disease.
+</td>
+</tr>
+</table>
 
 ---
 
-### 3. Patient Sorting
+## 🧩 System Modules
 
-Patient records can be sorted using different criteria.
-
-Available sorting options:
-
-- Sort by Name
-- Sort by Patient ID
-- Sort by Disease
-
-The project demonstrates different sorting techniques:
-
-- Bubble Sort for name-based sorting
-- Selection Sort for ID-based sorting
-- Bubble Sort for disease-based sorting
-
-A progress bar is also displayed during some sorting operations.
+| No. | Module | Main Capabilities |
+|:---:|---|---|
+| 01 | **Patient Management** | Add, update, search, view, and discharge patients |
+| 02 | **Appointment Management** | Schedule, complete, cancel, and review appointments |
+| 03 | **Billing System** | Calculate bills, generate invoices, and process payments |
+| 04 | **Reports** | Generate daily, monthly, doctor, ward, disease, revenue, and patient reports |
+| 05 | **Administration** | Manage doctors, wards, discharges, appointments, and system statistics |
+| 06 | **Data Management** | Save, load, back up, restore, import, export, sort, and inspect data |
+| 07 | **Medical Records** | Add, view, update, and review medical history |
 
 ---
 
-### 4. Appointment Management
+## 🔍 Search and Sorting
 
-The appointment module allows the hospital to manage patient appointments.
+The application provides multiple methods for locating and organizing records:
 
-Available operations:
-
-- Schedule Appointment
-- View All Appointments
-- Complete Appointment
-- Cancel Appointment
-
-Each appointment contains:
-
-- Appointment ID
-- Patient ID
-- Doctor
-- Date
-- Time
-- Appointment Status
-
-Appointment statuses include:
-
-- Scheduled
-- Completed
-- Cancelled
-
-Appointment records are stored in a binary file.
+| Category | Available Operations |
+|---|---|
+| **Patient Search** | ID using binary search, name using linear search, disease, doctor, and admission-date range |
+| **Patient Sorting** | Name, ID, disease, and age |
+| **Record Filters** | Patient appointments, doctor patients, ward patients, and medical history |
 
 ---
 
-### 5. Billing System
+## 🛠️ Programming Concepts Used
 
-The system provides a basic hospital billing module.
-
-The bill calculation uses the following predefined charges:
-
-| Service | Amount |
-|---|---:|
-| Consultation Fee | $50.00 |
-| Room Charges | $100.00 |
-| Medication | $75.00 |
-| Lab Tests | $60.00 |
-| **Total** | **$285.00** |
-
-The generated bill is stored with the patient's record.
-
-The system also provides a payment processing feature.
+- **Structures:** Patient, Doctor, Appointment, Payment, Medical Record, and Ward data models
+- **Pointers:** Dynamic arrays and memory-based record handling
+- **Dynamic Memory Allocation:** `malloc()`, `realloc()`, and `free()`
+- **File Handling:** Binary storage, CSV import/export, JSON export, backups, and logs
+- **Searching Algorithms:** Binary search and linear search
+- **Sorting Algorithms:** Record sorting by multiple patient attributes
+- **Input Validation:** Integer, decimal, string, gender, and date validation
+- **Error Handling:** Error logs, allocation checks, and file-operation checks
+- **Modular Programming:** Separate functions for every major operation
+- **ANSI Formatting:** Colored headings, warnings, status messages, and menus
 
 ---
 
-### 6. Payment Processing
-
-Payments can be processed against a patient's outstanding bill.
-
-The system records:
-
-- Payment ID
-- Patient ID
-- Amount
-- Payment Date
-- Payment Method
-
-Supported payment methods are entered by the user, such as:
-
-- Cash
-- Card
-- Bank
-
-After payment is processed, the patient's outstanding bill is set to zero.
-
----
-
-### 7. Reports
-
-The system provides several reporting features.
-
-#### Daily Report
-
-Displays:
-
-- Total patients
-- Active patients
-- Discharged patients
-- Total revenue
-- Recent active patient admissions
-
-#### Monthly Statistics
-
-The user can select a month and year to view:
-
-- Total admissions
-- Total discharges
-- Monthly revenue
-
-#### Doctor Report
-
-Displays patients associated with a selected doctor and calculates the total outstanding bill for those patients.
-
-#### Ward Report
-
-Displays the occupancy of hospital wards.
-
-The system currently provides 10 wards and displays their occupancy using a visual progress bar.
-
----
-
-### 8. Doctor Administration
-
-The administration module allows the user to assign or change a doctor for an existing patient.
-
-The assigned doctor is stored directly in the patient record.
-
----
-
-### 9. Ward Management
-
-The system contains 10 predefined wards:
-
-| Ward | Department | Capacity |
-|---|---|---:|
-| 1 | General Medicine | 50 |
-| 2 | Surgery | 40 |
-| 3 | Cardiology | 30 |
-| 4 | Neurology | 25 |
-| 5 | Pediatrics | 35 |
-| 6 | Orthopedics | 30 |
-| 7 | Gynecology | 30 |
-| 8 | ICU | 20 |
-| 9 | Emergency | 25 |
-| 10 | Maternity | 30 |
-
-The ward report displays the number of currently active patients assigned to each ward.
-
----
-
-### 10. Patient Discharge
-
-Patients can be discharged through the administration module.
-
-Before discharge, the system:
-
-1. Finds the patient by ID.
-2. Checks the patient's current status.
-3. Displays the outstanding bill.
-4. Allows payment processing if required.
-5. Requests a valid discharge date.
-6. Changes the patient status to discharged.
-7. Saves the updated information.
-
----
-
-## Data Management
-
-The project includes persistent data storage using C file handling.
-
-### Patient Data
-
-Patient records are stored in:
+## 📁 Project Structure
 
 ```text
-patients.bin
-````
-
-### Appointment Data
-
-Appointment records are stored in:
-
-```text
-appointments.bin
-```
-
-### Backup
-
-A backup of the patient database is stored in:
-
-```text
-patients_backup.bin
-```
-
-### Error Log
-
-Errors encountered during file operations can be recorded in:
-
-```text
-error.log
-```
-
----
-
-## CSV Import and Export
-
-The system provides CSV functionality for patient records.
-
-### Export
-
-Patient records can be exported to:
-
-```text
-patients_export.csv
-```
-
-The exported CSV contains:
-
-```text
-ID
-Name
-Age
-Gender
-Disease
-Doctor
-Ward
-Room
-Admission Date
-Discharge Date
-Bill
-Status
-```
-
-### Import
-
-Patient data can be imported from:
-
-```text
-patients_import.csv
-```
-
-The system reads the CSV records and adds them to the patient database.
-
----
-
-## Backup and Restore
-
-The Data Management menu provides:
-
-* Save Data
-* Load Data
-* Backup Data
-* Restore Data
-* Export to CSV
-* Import from CSV
-* View Memory Usage
-* Sort Patients by Name
-* Sort Patients by ID
-* Sort Patients by Disease
-
-The backup system copies the patient binary data into a separate backup file.
-
----
-
-## Dynamic Memory Management
-
-The project demonstrates dynamic memory allocation using:
-
-```c
-malloc()
-realloc()
-free()
-```
-
-Three dynamic arrays are used:
-
-```c
-Patient *patients;
-Appointment *appointments;
-Payment *payments;
-```
-
-The initial capacity is:
-
-```c
-#define INITIAL_CAPACITY 10
-```
-
-When an array reaches its capacity, the system expands it dynamically.
-
-For example:
-
-```c
-patientCapacity *= 2;
-```
-
-This allows the application to handle more records without using a fixed-size patient array.
-
-At program termination, dynamically allocated memory is released using:
-
-```c
-freeAllMemory();
-```
-
----
-
-## Structures Used
-
-The project uses three main structures.
-
-### Patient Structure
-
-```c
-typedef struct {
-    int id;
-    char name[MAX_STRING];
-    int age;
-    char gender;
-    char disease[MAX_STRING];
-    char doctor[MAX_STRING];
-    int ward;
-    int room;
-    char admissionDate[20];
-    char dischargeDate[20];
-    float bill;
-    int status;
-} Patient;
-```
-
-### Appointment Structure
-
-```c
-typedef struct {
-    int appointmentId;
-    int patientId;
-    char doctor[MAX_STRING];
-    char date[20];
-    char time[10];
-    int status;
-} Appointment;
-```
-
-### Payment Structure
-
-```c
-typedef struct {
-    int paymentId;
-    int patientId;
-    float amount;
-    char date[20];
-    char paymentMethod[20];
-} Payment;
-```
-
----
-
-## Input Validation
-
-The application contains dedicated validation functions.
-
-### Integer Validation
-
-```c
-validateInt()
-```
-
-Ensures that entered numbers are within the required range.
-
-### Floating-Point Validation
-
-```c
-validateFloat()
-```
-
-Validates numerical decimal input.
-
-### String Validation
-
-```c
-validateString()
-```
-
-Ensures that text is not empty and does not exceed the allowed length.
-
-### Gender Validation
-
-```c
-validateGender()
-```
-
-Accepts:
-
-```text
-M
-F
-```
-
-The input is converted to uppercase.
-
-### Date Validation
-
-```c
-validateDate()
-```
-
-Validates dates in:
-
-```text
-DD/MM/YYYY
-```
-
-The function checks:
-
-* Day range
-* Month range
-* Year range
-* Number of days in each month
-* Leap years
-
----
-
-## Error Handling
-
-The project includes basic error handling for:
-
-* Invalid user input
-* Invalid numerical ranges
-* Invalid gender
-* Invalid dates
-* Missing files
-* File opening failures
-* File reading failures
-* File writing failures
-* Memory allocation failures
-* Missing patient records
-* Missing appointment records
-
-Errors related to file operations can also be written to:
-
-```text
-error.log
-```
-
----
-
-## Console Interface
-
-The application uses ANSI escape sequences to provide colored console output.
-
-Different colors are used for:
-
-* Success messages
-* Errors
-* Warnings
-* Information
-* Headers
-* Important sections
-
-The interface also includes:
-
-* ASCII hospital banner
-* Section headers
-* Tables
-* Progress bars
-* Loading animation
-* Status messages
-
----
-
-## Main Menu
-
-The application provides the following main menu:
-
-```text
-1. Patient Management
-2. Appointments
-3. Billing System
-4. View All Patients
-5. Search Patient
-6. Reports
-7. Administration
-8. Data Management
-9. View Patient Details
-0. Exit
-```
-
----
-
-## Project Structure
-
-The entire application is implemented in a single C source file.
-
-```text
-Hospital-Management-System/
+Task 6 Hospital Management System/
 │
-├── main.c
-├── README.md
+├── main.c                         # Complete C source code
+├── README.md                      # Project documentation
+├── images/                        # Project screenshots
+│   ├── 01_Main_Menu.png
+│   ├── 02_Patient_Management.png
+│   ├── ...
+│   └── 37_Exit_System.png
 │
-└── Runtime Files/
-    ├── patients.bin
-    ├── appointments.bin
-    ├── patients_backup.bin
-    ├── patients_export.csv
-    ├── patients_import.csv
-    └── error.log
+├── patients.bin                   # Generated patient data file
+├── appointments.bin               # Generated appointment data file
+├── medical_records.bin            # Generated medical-record data file
+├── doctors.bin                    # Generated doctor data file
+├── backup_YYYYMMDD_HHMMSS.bin     # Timestamped patient-data backup
+├── patients_import.csv            # Optional CSV file used for importing data
+├── invoice.txt                    # Generated patient payment invoice
+└── error.log                      # Generated application error log
 ```
 
-> Runtime files are generated or used by the application when the corresponding features are executed.
+> Runtime data files are generated automatically when the program saves the corresponding records.
 
 ---
 
-## Technologies Used
+## ⚙️ Installation and Setup
 
-* C Programming Language
-* Standard C Libraries
-* Structures
-* Pointers
-* Dynamic Memory Allocation
-* File Handling
-* Binary Files
-* CSV Files
-* Searching Algorithms
-* Sorting Algorithms
-* Input Validation
-* Error Handling
-* ANSI Console Formatting
+### Prerequisites
 
----
+Install a C compiler such as **GCC**, **MinGW**, or use an IDE such as **Code::Blocks**, **Dev-C++**, or **Visual Studio Code** with a C compiler configured.
 
-## C Libraries Used
-
-The program uses:
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <ctype.h>
-#include <stdarg.h>
-```
-
-### Purpose of Libraries
-
-| Library    | Purpose                                            |
-| ---------- | -------------------------------------------------- |
-| `stdio.h`  | Input/output and file handling                     |
-| `stdlib.h` | Dynamic memory allocation and conversions          |
-| `string.h` | String operations                                  |
-| `time.h`   | Dates and payment timestamps                       |
-| `ctype.h`  | Character conversion and validation                |
-| `stdarg.h` | Variable argument functions for formatted messages |
-
----
-
-## Important C Concepts Demonstrated
-
-This project was designed to demonstrate practical C programming concepts.
-
-### Structures
-
-Used to represent:
-
-* Patients
-* Appointments
-* Payments
-
-### Pointers
-
-Pointers are used to access and manipulate dynamically allocated records.
-
-Example:
-
-```c
-Patient *newPatient = &patients[patientCount];
-```
-
-### Dynamic Memory Allocation
-
-The program uses:
-
-```c
-malloc()
-realloc()
-free()
-```
-
-to dynamically manage records.
-
-### File Handling
-
-The system uses:
-
-```c
-fopen()
-fread()
-fwrite()
-fclose()
-```
-
-for binary file operations.
-
-It also uses text file operations for CSV and error logging.
-
-### Searching
-
-The project demonstrates:
-
-* Binary Search
-* Linear Search
-
-### Sorting
-
-The project demonstrates:
-
-* Bubble Sort
-* Selection Sort
-
-### Variadic Functions
-
-The application uses `va_list`, `va_start`, and `va_end` to implement formatted message functions such as:
-
-```c
-printSuccess()
-printError()
-printWarning()
-printInfo()
-```
-
----
-
-## Data Flow
-
-The basic application flow is:
-
-```text
-Start Program
-      |
-      v
-Initialize Dynamic Memory
-      |
-      v
-Load Existing Patient Data
-      |
-      v
-Load Existing Appointment Data
-      |
-      v
-Display Main Menu
-      |
-      +-----------------------------+
-      |                             |
-      v                             v
-Patient Management            Appointment Management
-      |                             |
-      v                             v
-Billing System                Reports
-      |                             |
-      +-------------+---------------+
-                    |
-                    v
-             Data Management
-                    |
-                    v
-               Save Data
-                    |
-                    v
-                  Exit
-```
-
----
-
-## How to Run
-
-### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repository-name.git
+git clone https://github.com/mahnoor-yasir/InternGrow_Internship.git
 ```
 
-### 2. Open the Project
-
-Open the project folder in:
-
-* Visual Studio Code
-* Code::Blocks
-* Dev-C++
-* Visual Studio
-* Any C-compatible IDE
-
-### 3. Compile the Program
-
-Using GCC:
+### 2. Open the project directory
 
 ```bash
-gcc main.c -o hospital
+cd "InternGrow_Internship/Task 6 Hospital Management System"
 ```
 
-### 4. Run the Program
-
-On Windows:
+### 3. Compile the program
 
 ```bash
-hospital.exe
+gcc main.c -o hospital_management
 ```
 
-On Linux/macOS:
+### 4. Run the program
+
+**Windows:**
 
 ```bash
-./hospital
+hospital_management.exe
+```
+
+**Linux/macOS:**
+
+```bash
+./hospital_management
 ```
 
 ---
 
-## Windows Compiler Note
+## 🚀 How to Use
 
-The project uses:
+1. Compile and launch the application.
+2. Select a module by entering its number in the main menu.
+3. Follow the displayed prompts to add, update, search, or view records.
+4. Use the **Data Management** module to save, back up, restore, import, or export data.
+5. Enter `0` in a submenu to return to the previous menu or exit from the main menu.
 
-```c
-strcasecmp()
-```
-
-for case-insensitive string comparison.
-
-`strcasecmp()` is available on POSIX-compatible systems. If a Windows compiler does not recognize it, it may need to be replaced with the Windows equivalent:
-
-```c
-_stricmp()
-```
-
-depending on the compiler being used.
+> Enter valid values in the requested formats. Dates should use `DD/MM/YYYY`, and menu choices should be entered as numbers.
 
 ---
 
-## Sample Workflow
+## 💾 Data Storage
 
-A typical workflow can be:
-
-```text
-1. Start the application
-2. Add a new patient
-3. Assign a doctor
-4. Assign ward and room
-5. Schedule an appointment
-6. Generate the patient's bill
-7. Process payment
-8. Complete the appointment
-9. Discharge the patient
-10. Generate reports
-11. Save the data
-```
+| File | Purpose |
+|---|---|
+| `patients.bin` | Stores patient records persistently |
+| `appointments.bin` | Stores appointment records |
+| `medical_records.bin` | Stores patient medical records |
+| `doctors.bin` | Stores registered doctor records |
+| `backup_YYYYMMDD_HHMMSS.bin` | Stores a timestamped, recoverable backup of patient data |
+| `patients_import.csv` | Provides patient records for the CSV import operation |
+| `patients_export.csv` | Contains exported patient data in CSV format |
+| `patients_export.json` | Contains exported patient data in JSON format |
+| `invoice.txt` | Contains the latest generated payment invoice |
+| `error.log` | Records application errors and diagnostic information |
 
 ---
 
-## Screenshots
+## 📸 Project Screenshots
 
-Add your actual application screenshots here after uploading them to the repository.
+### 🏠 Main Interface
 
-### Main Menu
+<table>
+<tr>
+<td width="50%" align="center"><strong>01 — Main Menu</strong><br><br><img src="images/01_Main_Menu.png" alt="Hospital Management System Main Menu" width="100%"></td>
+<td width="50%" align="center"><strong>02 — Patient Management</strong><br><br><img src="images/02_Patient_Management.png" alt="Patient Management Menu" width="100%"></td>
+</tr>
+</table>
 
-```markdown
-![Hospital Management System Main Menu](screenshots/main-menu.png)
-```
+### 👤 Patient Management
 
-### Patient Management
+<table>
+<tr>
+<td width="50%" align="center"><strong>03 — Add New Patient</strong><br><br><img src="images/03_Add_New_Patient.png" alt="Add New Patient" width="100%"></td>
+<td width="50%" align="center"><strong>04 — Update Patient</strong><br><br><img src="images/04_Update_Patient.png" alt="Update Patient" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><strong>05 — View All Patients</strong><br><br><img src="images/05_View_All_Patients.png" alt="View All Patients" width="100%"></td>
+<td width="50%" align="center"><strong>06 — Search Patient</strong><br><br><img src="images/06_Search_Patient.png" alt="Search Patient" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><strong>07 — View Patient Details</strong><br><br><img src="images/07_View_Patient_Details.png" alt="View Patient Details" width="100%"></td>
+<td width="50%" align="center"><strong>08 — Discharge Patient</strong><br><br><img src="images/08_Discharge_Patient.png" alt="Discharge Patient" width="100%"></td>
+</tr>
+</table>
 
-```markdown
-![Patient Management](screenshots/patient-management.png)
-```
+### 📅 Appointment Management
 
-### Patient Details
+<table>
+<tr>
+<td width="50%" align="center"><strong>09 — Appointment Management</strong><br><br><img src="images/09_Appointment_Management.png" alt="Appointment Management Menu" width="100%"></td>
+<td width="50%" align="center"><strong>10 — Schedule Appointment</strong><br><br><img src="images/10_Schedule_Appointment.png" alt="Schedule Appointment" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><strong>11 — View All Appointments</strong><br><br><img src="images/11_View_All_Appointments.png" alt="View All Appointments" width="100%"></td>
+<td width="50%" align="center"><strong>12 — Complete Appointment</strong><br><br><img src="images/12_Complete_Appointment.png" alt="Complete Appointment" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><strong>13 — Cancel Appointment</strong><br><br><img src="images/13_Cancel_Appointment.png" alt="Cancel Appointment" width="100%"></td>
+<td width="50%" align="center"><strong>14 — Patient Appointments</strong><br><br><img src="images/14_View_Patient_Appointments.png" alt="View Patient Appointments" width="100%"></td>
+</tr>
+</table>
 
-```markdown
-![Patient Details](screenshots/patient-details.png)
-```
+### 💳 Billing System
 
-### Appointment Management
+<table>
+<tr>
+<td width="50%" align="center"><strong>15 — Billing System</strong><br><br><img src="images/15_Billing_System.png" alt="Billing System Menu" width="100%"></td>
+<td width="50%" align="center"><strong>16 — Generate Hospital Bill</strong><br><br><img src="images/16_Generate_Hospital_Bill.png" alt="Generate Hospital Bill" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><strong>17 — Process Payment</strong><br><br><img src="images/17_Process_Payment.png" alt="Process Payment" width="100%"></td>
+<td width="50%" align="center"><strong>Payment Workflow</strong><br><br>Calculate charges, generate an itemized bill, process a payment, review payment history, and generate an invoice.</td>
+</tr>
+</table>
 
-```markdown
-![Appointment Management](screenshots/appointments.png)
-```
+### 📊 Reports
 
-### Billing System
+<table>
+<tr>
+<td width="50%" align="center"><strong>18 — Reports Menu</strong><br><br><img src="images/18_Reports_Menu.png" alt="Reports Menu" width="100%"></td>
+<td width="50%" align="center"><strong>19 — Daily Report</strong><br><br><img src="images/19_Daily_Report.png" alt="Daily Report" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><strong>20 — Monthly Statistics</strong><br><br><img src="images/20_Monthly_Statistics.png" alt="Monthly Statistics" width="100%"></td>
+<td width="50%" align="center"><strong>21 — Doctor Report</strong><br><br><img src="images/21_Doctor_Report.png" alt="Doctor Report" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><strong>22 — Ward Report</strong><br><br><img src="images/22_Ward_Report.png" alt="Ward Report" width="100%"></td>
+<td width="50%" align="center"><strong>23 — Disease Report</strong><br><br><img src="images/23_Disease_Report.png" alt="Disease Report" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><strong>24 — Patient Summary Report</strong><br><br><img src="images/24_Patient_Summary_Report.png" alt="Patient Summary Report" width="100%"></td>
+<td width="50%" align="center"><strong>Reporting Capabilities</strong><br><br>Monitor patient activity, revenue, doctor assignments, ward occupancy, disease statistics, and overall hospital performance.</td>
+</tr>
+</table>
 
-```markdown
-![Billing System](screenshots/billing.png)
-```
+### ⚙️ Administration
 
-### Reports
+<table>
+<tr>
+<td width="50%" align="center"><strong>25 — Administration</strong><br><br><img src="images/25_Administration.png" alt="Administration Menu" width="100%"></td>
+<td width="50%" align="center"><strong>26 — Doctor Management</strong><br><br><img src="images/26_Doctor_Management.png" alt="Doctor Management Menu" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><strong>27 — Add Doctor</strong><br><br><img src="images/27_Add_Doctor.png" alt="Add Doctor" width="100%"></td>
+<td width="50%" align="center"><strong>28 — View All Doctors</strong><br><br><img src="images/28_View_All_Doctors.png" alt="View All Doctors" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><strong>29 — Ward Management</strong><br><br><img src="images/29_Ward_Management.png" alt="Ward Management Menu" width="100%"></td>
+<td width="50%" align="center"><strong>30 — View Ward Status</strong><br><br><img src="images/30_View_Ward_Status.png" alt="View Ward Status" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><strong>31 — View Ward Patients</strong><br><br><img src="images/31_View_Ward_Patients.png" alt="View Ward Patients" width="100%"></td>
+<td width="50%" align="center"><strong>32 — System Statistics</strong><br><br><img src="images/32_System_Statistics.png" alt="System Statistics" width="100%"></td>
+</tr>
+</table>
 
-```markdown
-![Hospital Reports](screenshots/reports.png)
-```
+### 💾 Data and Medical Records
 
-### Data Management
-
-```markdown
-![Data Management](screenshots/data-management.png)
-```
-
-> Make sure the screenshot filenames and folder names exactly match the files uploaded to GitHub.
-
----
-
-## Learning Outcomes
-
-Through this project, the following C programming concepts were practiced:
-
-* Designing structures for real-world data
-* Working with pointers
-* Allocating and releasing dynamic memory
-* Expanding dynamic arrays
-* Reading and writing binary files
-* Working with CSV data
-* Implementing searching algorithms
-* Implementing sorting algorithms
-* Validating user input
-* Handling file and memory errors
-* Creating modular functions
-* Building menu-driven console applications
-* Generating reports from stored data
-* Managing relationships between patients, appointments, and payments
-
----
-
-## Project Highlights
-
-* Single-file C implementation
-* Menu-driven console interface
-* Dynamic memory allocation
-* Persistent patient data
-* Persistent appointment data
-* Patient search and sorting
-* Appointment scheduling
-* Billing and payment processing
-* Hospital ward management
-* Daily and monthly reports
-* Doctor-specific reports
-* CSV import/export
-* Backup and restore functionality
-* Error logging
-* Input validation
-* Colored console interface
-* Loading animations and progress indicators
-
----
-
-## Limitations
-
-This is a console-based educational project rather than a production hospital information system.
-
-Some functionality is intentionally simplified. For example:
-
-* Billing uses predefined charges.
-* Ward capacities are predefined.
-* Appointment scheduling does not implement calendar conflict detection.
-* CSV handling assumes properly formatted input.
-* The application does not provide authentication or user roles.
-* Data is stored locally rather than in a database.
-* Payment records are maintained in memory during the program session.
-
-These limitations keep the project focused on demonstrating core C programming concepts.
-
----
-
-## Future Improvements
-
-Possible future improvements include:
-
-* Login and authentication system
-* Admin and staff roles
-* Database integration
-* More advanced billing calculations
-* Medicine inventory management
-* Doctor schedules
-* Appointment conflict detection
-* More detailed patient medical history
-* Improved CSV validation
-* Persistent payment storage
-* Graphical user interface
-* Network-based multi-user access
-* Advanced reporting
-* Automatic database backups
-* Stronger data validation
+<table>
+<tr>
+<td width="50%" align="center"><strong>33 — Data Management</strong><br><br><img src="images/33_Data_Management.png" alt="Data Management Menu" width="100%"></td>
+<td width="50%" align="center"><strong>34 — Medical Records Menu</strong><br><br><img src="images/34_Medical_Records_Menu.png" alt="Medical Records Menu" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><strong>35 — Add Medical Record</strong><br><br><img src="images/35_Add_Medical_Record.png" alt="Add Medical Record" width="100%"></td>
+<td width="50%" align="center"><strong>36 — View Medical Records</strong><br><br><img src="images/36_View_Medical_Records.png" alt="View Medical Records" width="100%"></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><strong>37 — Exit System</strong><br><br><img src="images/37_Exit_System.png" alt="Exit Hospital Management System" width="70%"></td>
+</tr>
+</table>
 
 ---
 
-## Author
+## 🔮 Future Enhancements
 
-**Mahnoor Yasir**
-
-BS Computer Science
-
-InternGrow Internship — Task 6
-
----
-
-## Internship Task
-
-**InternGrow Internship**
-
-### Task 6 — Hospital Management System
-
-This project was developed to demonstrate practical implementation of C programming concepts through a real-world hospital management scenario.
+- Graphical user interface using GTK or another C-compatible UI toolkit
+- Database integration using MySQL or SQLite
+- Role-based login for administrators, doctors, and reception staff
+- Secure password storage and access control
+- Real-time appointment reminders
+- Prescription printing and downloadable invoices
+- Dashboard charts for hospital analytics
+- Network-based multi-user access
 
 ---
 
-## License
+## 🎯 Learning Outcomes
 
-This project was developed for educational and internship purposes.
+This project strengthened practical understanding of:
 
-You are welcome to study and modify the source code for learning purposes.
+- Designing and implementing a large modular C application
+- Modeling real-world entities using structures
+- Managing dynamic memory safely
+- Implementing persistent file-based storage
+- Applying search and sorting algorithms to structured records
+- Validating user input and handling runtime errors
+- Creating readable console interfaces and organized documentation
 
+---
+
+## 👩‍💻 Author
+
+<div align="center">
+
+### Mahnoor Yasir
+
+**BS Computer Science Student | Developer & Problem Solver**
+
+[![GitHub](https://img.shields.io/badge/GitHub-mahnoor--yasir-181717?style=for-the-badge&logo=github)](https://github.com/mahnoor-yasir)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mahnoor%20Yasir-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/mahnoor-yasir/)
+[![itch.io](https://img.shields.io/badge/itch.io-Game%20Portfolio-FA5C5C?style=for-the-badge&logo=itch.io&logoColor=white)](https://mahnoor-yasir.itch.io/)
+
+</div>
+
+---
+
+## 📄 License and Usage
+
+This project was created for educational and internship purposes. You may study and reference the code while providing appropriate credit to the author.
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project useful, consider giving the repository a star!
+
+**Developed with dedication in C by Mahnoor Yasir**
+
+</div>
