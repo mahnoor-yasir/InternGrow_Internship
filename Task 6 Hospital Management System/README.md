@@ -158,33 +158,6 @@ The application provides multiple methods for locating and organizing records:
 
 ---
 
-## 📁 Project Structure
-
-```text
-Task 6 Hospital Management System/
-│
-├── main.c                         # Complete C source code
-├── README.md                      # Project documentation
-├── images/                        # Project screenshots
-│   ├── 01_Main_Menu.png
-│   ├── 02_Patient_Management.png
-│   ├── ...
-│   └── 37_Exit_System.png
-│
-├── patients.bin                   # Generated patient data file
-├── appointments.bin               # Generated appointment data file
-├── medical_records.bin            # Generated medical-record data file
-├── doctors.bin                    # Generated doctor data file
-├── backup_YYYYMMDD_HHMMSS.bin     # Timestamped patient-data backup
-├── patients_import.csv            # Optional CSV file used for importing data
-├── invoice.txt                    # Generated patient payment invoice
-└── error.log                      # Generated application error log
-```
-
-> Runtime data files are generated automatically when the program saves the corresponding records.
-
----
-
 ## ⚙️ Installation and Setup
 
 ### Prerequisites
